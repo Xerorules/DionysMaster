@@ -39,6 +39,7 @@ namespace WindowsFormsApplication1
         public string v_desc_bien;
         public string v_precio_bien;
         public string v_llamabien;
+        public string v_numeroticket;
         /*-------------------------------*/
         #endregion
 
@@ -56,6 +57,7 @@ namespace WindowsFormsApplication1
         public String WEB = "";
         public double VUELTO = 0.00, PAGA = 0.00;
         
+        
         //public DataTable detallebien = new DataTable();
         public DataTable vPdt_detBien = new DataTable();
 
@@ -67,6 +69,8 @@ namespace WindowsFormsApplication1
 
         private void InterfazVenta_Load(object sender, EventArgs e)
         {
+            lblTicket.Text = v_numeroticket;
+            lblSerie.Text = Properties.Settings.Default.serie;
             lblEmpresa.Text = Properties.Settings.Default.nomempresa;
             lblUsuario.Text = Properties.Settings.Default.nomempleado;
             lblSede.Text = Properties.Settings.Default.nomsede;
@@ -938,17 +942,38 @@ namespace WindowsFormsApplication1
         void P_IMPRIMIR()
         {
             string DIRECCION="";
+            string RUC = "";
             con.Open();
-            SqlCommand cmv = new SqlCommand("SELECT DIRECCION FROM EMPRESA WHERE DESCRIPCION='"+ Properties.Settings.Default.nomempresa + "'", con);
+            SqlCommand cmv = new SqlCommand("SELECT DIRECCION,RUC FROM EMPRESA WHERE DESCRIPCION='"+ Properties.Settings.Default.nomempresa + "'", con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmv);
             da.Fill(dt);
             DIRECCION = dt.Rows[0][0].ToString();
+            RUC = dt.Rows[0][1].ToString();
             con.Close();
-            //string cantidad;
-            //string descripcion;
-            // string total;
-            //double totalLinea = 90.51;
+
+            string NUMERO = "";
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select TOP 1 NUMERO from VENTA ORDER BY ID_VENTA DESC", con);
+            DataTable dtt = new DataTable();
+            SqlDataAdapter dda = new SqlDataAdapter(cmd);
+            dda.Fill(dtt);
+            NUMERO = dtt.Rows[0][0].ToString();
+            lblTicket.Text = (Convert.ToInt32(NUMERO)+1).ToString();
+            lblSerie.Text = Properties.Settings.Default.serie;
+            con.Close();
+
+            string MAQREG = "";
+            string puntoventadesc = "";
+            con.Open();
+            SqlCommand cmd2 = new SqlCommand("SELECT SERIE_MAQREG,DESCRIPCION FROM PUNTO_VENTA WHERE ID_PUNTOVENTA='" + Properties.Settings.Default.punto_venta+"'", con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+            MAQREG = dt2.Rows[0][0].ToString();
+            puntoventadesc = dt2.Rows[0][1].ToString();
+            //con.Close();
+
 
             CreaTicket Ticket1 = new CreaTicket();
             Ticket1.impresora = "BIXOLON SRP-270";
@@ -956,39 +981,44 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro(Properties.Settings.Default.nomempresa);
             Ticket1.TextoCentro(DIRECCION);
 
-            Ticket1.TextoCentro("RUC: " + txtCLIENTE_RUC.Text);
+            Ticket1.TextoCentro("RUC: " + RUC);
             Ticket1.LineasGuion(); // imprime una linea de guiones
-            Ticket1.TextoCentro(""/*LBLMAQREG.Text*/);
+            Ticket1.TextoCentro(MAQREG);
             Ticket1.TextoCentro(DateTime.Now.ToString());
 
             string TIP_DOC;
             TIP_DOC = cboTIPO_DOC.Text;
 
             //P_SERIE_Y_NUMERO_CORRELATIVO_POR_PTOVENTA(TIP_DOC, CBOPTOVENTA.Text);
-            Ticket1.TextoCentro("Ticket: " + TIP_DOC + " " + Properties.Settings.Default.serie);
+            Ticket1.TextoCentro("Ticket: " + TIP_DOC + " " + Properties.Settings.Default.serie +"-" + NUMERO);
             Ticket1.LineasGuion();
 
 
             //DGVPEDIDO["MONEDA", fila].Value.ToString();
 
-            Ticket1.TextoIzquierda("CANT   DETALLE                IMPORTE");
+            Ticket1.TextoIzquierda("CANT  DETALLE                    IMPORTE");
             for (int i = 0; i < dgvBIEN_VENTA.Rows.Count; i++)
             {
-                Ticket1.TextoExtremos(" " + dgvBIEN_VENTA.Rows[i].Cells[1].Value.ToString() + "   " + dgvBIEN_VENTA.Rows[i].Cells[2].Value.ToString(), MON + dgvBIEN_VENTA.Rows[i].Cells[4].Value.ToString());
+                Ticket1.TextoExtremos(" " + dgvBIEN_VENTA.Rows[i].Cells[1].Value.ToString() + "    " + dgvBIEN_VENTA.Rows[i].Cells[2].Value.ToString(), MON + dgvBIEN_VENTA.Rows[i].Cells[4].Value.ToString());
             }
 
             Ticket1.LineasTotales();
 
-
+            string PAGO = PAGA.ToString("C");
+            string VUELTOF = VUELTO.ToString("C");
             Ticket1.TextoExtremos("SubTotal:", MON + lblSUBTOTAL.Text);
             Ticket1.TextoExtremos("IGV: ", MON + lblIGV.Text);
             Ticket1.TextoExtremos("Total: ", MON + lblTOTAL.Text);
-            Ticket1.TextoCentro("P.V:" + Properties.Settings.Default.punto_venta);
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("Paga:" + PAGO.ToString());
+            Ticket1.TextoCentro("Vuelto:" + VUELTOF.ToString());
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("P.V:" + puntoventadesc);
             Ticket1.TextoCentro("Cajero: " + Properties.Settings.Default.nomempleado);
 
             if (txtCLIENTE_VENTA.Text != "")
             { Ticket1.TextoCentro("Cliente: " + txtCLIENTE_VENTA.Text);
-                Ticket1.TextoCentro("DOC: " + txtCLIENTE_RUC.Text);
+                Ticket1.TextoCentro("RUC/DNI: " + txtCLIENTE_RUC.Text);
                 Ticket1.TextoCentro("Direccion: " + LBLDIRECCION.Text); }
             else
             {

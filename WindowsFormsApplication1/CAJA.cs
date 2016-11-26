@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 using CAPA_NEGOCIO;
 using CAPA_ENTIDAD;
@@ -23,9 +25,9 @@ namespace WindowsFormsApplication1
         public string nombre_empleado;
         public string tipo_cambio;
         public string sede;
-        
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
 
-        
+
 
         public CAJA()
         {
@@ -278,8 +280,18 @@ namespace WindowsFormsApplication1
         {
             if (id_caja != string.Empty) //SI ES DIFERENTE DE VACIO ES PORQUE EL USUARIO  ID_USUARIO Y EL PUNTO DE VENTA ID_PUNTOVENTA TIENE CAJA APERTURADA
             {
-
                 InterfazVenta objventa = new InterfazVenta();
+                string NUMERHO = "";
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select TOP 1 NUMERO from VENTA ORDER BY ID_VENTA DESC", con);
+                DataTable dtt = new DataTable();
+                SqlDataAdapter dda = new SqlDataAdapter(cmd);
+                dda.Fill(dtt);
+                NUMERHO = dtt.Rows[0][0].ToString();
+                objventa.v_numeroticket = (Convert.ToInt32(NUMERHO) + 1).ToString();
+                con.Close();
+
+                
                 objventa.lblCajaIDVentas.Text = Program.id_caja;
                 objventa.v_id_empleado = id_empleado;
                 objventa.v_id_puntoventa = id_puntoventa;

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.lblCajaIDVentas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,6 +92,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LBLDIRECCION = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblTicket = new System.Windows.Forms.Label();
+            this.lblSerie = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBIEN_VENTA)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -319,20 +323,20 @@
             this.dgvBIEN_VENTA.Location = new System.Drawing.Point(757, 273);
             this.dgvBIEN_VENTA.MultiSelect = false;
             this.dgvBIEN_VENTA.Name = "dgvBIEN_VENTA";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBIEN_VENTA.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBIEN_VENTA.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBIEN_VENTA.RowHeadersVisible = false;
             this.dgvBIEN_VENTA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvBIEN_VENTA.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvBIEN_VENTA.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBIEN_VENTA.Size = new System.Drawing.Size(788, 368);
             this.dgvBIEN_VENTA.TabIndex = 18;
             this.dgvBIEN_VENTA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBIEN_VENTA_CellContentClick);
@@ -883,12 +887,58 @@
             this.LBLDIRECCION.Text = "label15";
             this.LBLDIRECCION.Visible = false;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(37, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 20);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "TICKET:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(232, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 20);
+            this.label16.TabIndex = 58;
+            this.label16.Text = "SERIE:";
+            // 
+            // lblTicket
+            // 
+            this.lblTicket.AutoSize = true;
+            this.lblTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTicket.ForeColor = System.Drawing.Color.White;
+            this.lblTicket.Location = new System.Drawing.Point(104, 3);
+            this.lblTicket.Name = "lblTicket";
+            this.lblTicket.Size = new System.Drawing.Size(0, 20);
+            this.lblTicket.TabIndex = 59;
+            // 
+            // lblSerie
+            // 
+            this.lblSerie.AutoSize = true;
+            this.lblSerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerie.ForeColor = System.Drawing.Color.White;
+            this.lblSerie.Location = new System.Drawing.Point(291, 3);
+            this.lblSerie.Name = "lblSerie";
+            this.lblSerie.Size = new System.Drawing.Size(0, 20);
+            this.lblSerie.TabIndex = 60;
+            // 
             // InterfazVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1624, 943);
+            this.Controls.Add(this.lblSerie);
+            this.Controls.Add(this.lblTicket);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.LBLDIRECCION);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtTIPO_PAGO);
@@ -1016,5 +1066,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label LBLDIRECCION;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblTicket;
+        private System.Windows.Forms.Label lblSerie;
     }
 }

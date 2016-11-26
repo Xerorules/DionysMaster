@@ -629,14 +629,14 @@
             this.dgvMOV_CAJAKARDEX.AllowUserToDeleteRows = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeColumns = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
             this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMOV_CAJAKARDEX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvMOV_CAJAKARDEX.BackgroundColor = System.Drawing.Color.DarkCyan;
             this.dgvMOV_CAJAKARDEX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
