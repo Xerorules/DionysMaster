@@ -632,10 +632,11 @@ namespace WindowsFormsApplication1
 
                 N_OBJVENTAS.MANTENIMIENTO_VENTA(E_OBJMANT_VENTADET); //AQUI CARGO LA VENTA
                 MANTENIMIENTO_VENTADETALLE();// AQUI CARGO EL DETALLE DE LA VENTA
-                P_IMPRIMIR();
-                MANTENIMIENTO_CAJA_KARDEX();//AQUI LLAMO A MI PROCEDIMIENTO PAR GENERAR EL INGRESO EN CAJA KARDEX
-                //IMPRIMIR_SPOOL();   /*<<<<<<<FALTA IMPLEMENTAR IMPRIMIR>>>>>>*/
                 
+                MANTENIMIENTO_CAJA_KARDEX();//AQUI LLAMO A MI PROCEDIMIENTO PAR GENERAR EL INGRESO EN CAJA KARDEX
+                P_IMPRIMIR();
+                //IMPRIMIR_SPOOL();   /*<<<<<<<FALTA IMPLEMENTAR IMPRIMIR>>>>>>*/
+
             }
             catch (Exception)
             {
@@ -943,54 +944,48 @@ namespace WindowsFormsApplication1
         {
             string DIRECCION="";
             string RUC = "";
-            con.Open();
-            SqlCommand cmv = new SqlCommand("SELECT DIRECCION,RUC FROM EMPRESA WHERE DESCRIPCION='"+ Properties.Settings.Default.nomempresa + "'", con);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmv);
-            da.Fill(dt);
-            DIRECCION = dt.Rows[0][0].ToString();
-            RUC = dt.Rows[0][1].ToString();
-            con.Close();
-
+            string ID_VENTA = "";
             string NUMERO = "";
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select TOP 1 NUMERO from VENTA ORDER BY ID_VENTA DESC", con);
-            DataTable dtt = new DataTable();
-            SqlDataAdapter dda = new SqlDataAdapter(cmd);
-            dda.Fill(dtt);
-            NUMERO = dtt.Rows[0][0].ToString();
-            lblTicket.Text = (Convert.ToInt32(NUMERO)+1).ToString();
-            lblSerie.Text = Properties.Settings.Default.serie;
-            con.Close();
-
             string MAQREG = "";
             string puntoventadesc = "";
             con.Open();
-            SqlCommand cmd2 = new SqlCommand("SELECT SERIE_MAQREG,DESCRIPCION FROM PUNTO_VENTA WHERE ID_PUNTOVENTA='" + Properties.Settings.Default.punto_venta+"'", con);
-            DataTable dt2 = new DataTable();
-            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
-            da2.Fill(dt2);
-            MAQREG = dt2.Rows[0][0].ToString();
-            puntoventadesc = dt2.Rows[0][1].ToString();
-            //con.Close();
+            SqlCommand cmv = new SqlCommand("SELECT V_ID_VENTA,V_NUMERO,E_DIRECCION,E_RUC,E_WEB_SITE,PV_SERIE_MAQREG, PV_DESCRIPCION FROM V_TABLA_VENTAS WHERE V_ID_VENTA = (SELECT TOP 1 V_ID_VENTA FROM V_TABLA_VENTAS ORDER BY V_ID_VENTA DESC)", con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmv);
+            da.Fill(dt);
+            ID_VENTA = dt.Rows[0][0].ToString();
+            NUMERO = dt.Rows[0][1].ToString();
+            DIRECCION = dt.Rows[0][2].ToString();
+            RUC = dt.Rows[0][3].ToString();
+            WEB = dt.Rows[0][4].ToString();
+            MAQREG = dt.Rows[0][5].ToString();
+            puntoventadesc = dt.Rows[0][6].ToString();
+            lblTicket.Text = (Convert.ToInt32(NUMERO) + 1).ToString();
+            lblSerie.Text = Properties.Settings.Default.serie;
+            con.Close();
+
+            
 
 
             CreaTicket Ticket1 = new CreaTicket();
             Ticket1.impresora = "BIXOLON SRP-270";
 
             Ticket1.TextoCentro(Properties.Settings.Default.nomempresa);
-            Ticket1.TextoCentro(DIRECCION);
-
             Ticket1.TextoCentro("RUC: " + RUC);
             Ticket1.LineasGuion(); // imprime una linea de guiones
-            Ticket1.TextoCentro(MAQREG);
+
+            Ticket1.TextoCentro(Properties.Settings.Default.nomsede);
+            Ticket1.TextoCentro(DIRECCION);
+            Ticket1.LineasGuion(); // imprime una linea de guiones
+
+            Ticket1.TextoCentro("MAQ. REG: "+MAQREG);
             Ticket1.TextoCentro(DateTime.Now.ToString());
 
             string TIP_DOC;
             TIP_DOC = cboTIPO_DOC.Text;
 
             //P_SERIE_Y_NUMERO_CORRELATIVO_POR_PTOVENTA(TIP_DOC, CBOPTOVENTA.Text);
-            Ticket1.TextoCentro("Ticket: " + TIP_DOC + " " + Properties.Settings.Default.serie +"-" + NUMERO);
+            Ticket1.TextoCentro("TICKET: " + "TB" + " " + Properties.Settings.Default.serie +"-" + NUMERO);
             Ticket1.LineasGuion();
 
 
@@ -1010,28 +1005,29 @@ namespace WindowsFormsApplication1
             Ticket1.TextoExtremos("IGV: ", MON + lblIGV.Text);
             Ticket1.TextoExtremos("Total: ", MON + lblTOTAL.Text);
             Ticket1.TextoCentro("");
-            Ticket1.TextoCentro("Paga:" + PAGO.ToString());
-            Ticket1.TextoCentro("Vuelto:" + VUELTOF.ToString());
+            Ticket1.TextoCentro("PAGA CON:" + PAGO.ToString());
+            Ticket1.TextoCentro("VUELTO:" + VUELTOF.ToString());
             Ticket1.TextoCentro("");
-            Ticket1.TextoCentro("P.V:" + puntoventadesc);
-            Ticket1.TextoCentro("Cajero: " + Properties.Settings.Default.nomempleado);
-
             if (txtCLIENTE_VENTA.Text != "")
-            { Ticket1.TextoCentro("Cliente: " + txtCLIENTE_VENTA.Text);
-                Ticket1.TextoCentro("RUC/DNI: " + txtCLIENTE_RUC.Text);
-                Ticket1.TextoCentro("Direccion: " + LBLDIRECCION.Text); }
-            else
             {
-
-                
-
+                Ticket1.TextoExtremos("CLIENTE: ", txtCLIENTE_VENTA.Text);
+                Ticket1.TextoExtremos("RUC/DNI: ", txtCLIENTE_RUC.Text);
+                Ticket1.TextoExtremos("DIRECCION: ", LBLDIRECCION.Text);
             }
+            Ticket1.LineasGuion(); // imprime una linea de guiones
+            Ticket1.TextoCentro("P.V:" + puntoventadesc);
+            Ticket1.TextoCentro("CAJERO: " + Properties.Settings.Default.nomempleado);
+            Ticket1.TextoCentro("PAGINA WEB: " + WEB);
+            Ticket1.TextoCentro("ID VENTA: " + ID_VENTA);
 
-            Ticket1.TextoCentro(WEB);
+           
+            
+
+           // Ticket1.TextoCentro(WEB);
             // imprime linea con total
             Ticket1.LineasGuion();
             Ticket1.TextoCentro("Agradecemos su Preferencia"); // imprime en el centro "Venta mostrador"
-
+            Ticket1.TextoCentro("Vuelva pronto!! Lo esperamos"); // imprime en el centro "Venta mostrador"
             Ticket1.CortaTicket();
 
             /*id_cliente = 0;
