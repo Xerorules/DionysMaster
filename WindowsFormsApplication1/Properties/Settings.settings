@@ -32,7 +32,7 @@
     <Setting Name="nomsede" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
+    <Setting Name="fecha_apertura_caja" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

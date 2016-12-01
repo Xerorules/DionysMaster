@@ -88,7 +88,12 @@ namespace WindowsFormsApplication1
 
             if (dt.Rows.Count != 0) {
                 txtFchaApertura.Text = dt.Rows[0]["FECHA_INICIAL"].ToString(); //AQUI RECUPERO LA FECHA DE APERTURA QUE SE HIZO EN UN PRINCIPIO
+                Properties.Settings.Default.fecha_apertura_caja = txtFchaApertura.Text;
+                Properties.Settings.Default.Save();
+                Properties.Settings.Default.Upgrade();
+
                 txtFchaCierre.Text = DateTime.Now.ToString();
+                
                 txtIDcaja.Text = dt.Rows[0]["ID_CAJA"].ToString();
                 txtSaldoInicial.Text = dt.Rows[0]["SALDO_INICIAL"].ToString();
                 txtSaldoFinal.Text = dt.Rows[0]["SALDO_FINAL"].ToString();

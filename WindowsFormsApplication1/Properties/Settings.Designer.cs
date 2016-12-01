@@ -146,12 +146,12 @@ namespace WindowsFormsApplication1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        public string fecha_apertura_caja {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["fecha_apertura_caja"]));
             }
             set {
-                this["Setting"] = value;
+                this["fecha_apertura_caja"] = value;
             }
         }
     }
