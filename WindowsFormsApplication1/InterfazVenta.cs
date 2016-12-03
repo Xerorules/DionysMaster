@@ -810,18 +810,20 @@ namespace WindowsFormsApplication1
                     txtCLIENTE_ID.Text = string.Empty;
                     txtCLIENTE_RUC.Text = string.Empty;
                     txtCLIENTE_VENTA.Text = string.Empty;
+                    
                 }
                 else if (result == DialogResult.Cancel)
                 {
                     txtCLIENTE_ID.Text = string.Empty;
                     txtCLIENTE_RUC.Text = string.Empty;
                     txtCLIENTE_VENTA.Text = string.Empty;
-                    LIMPIAR_VENTA();
+                    
                 }
-                
-                     
-                
-                
+
+                LIMPIAR_VENTA();
+
+
+
             }
             else
             {

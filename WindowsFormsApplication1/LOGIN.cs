@@ -66,6 +66,12 @@ namespace WindowsFormsApplication1
         private void LISTA_PUNTOVENTA(string ID_SEDE)
         {
             comboBox3.DataSource = OBJLOGUEO.PUNTO_VENTA(ID_SEDE);
+            if (comboBox2.SelectedIndex == 1)
+            {                     //ESCONDIENDO LA CAJA ADMINISTRACION DE COMBO PUNTO DE VENTA
+                DataTable dt = OBJLOGUEO.PUNTO_VENTA(ID_SEDE);
+                dt.Rows[4].Delete();
+                comboBox3.DataSource = dt;
+            }
             comboBox3.ValueMember = "PK_PUNTO_VENTA";
             comboBox3.DisplayMember = "DESCRIPCION";
             

@@ -99,8 +99,6 @@ namespace WindowsFormsApplication1
                 txtSaldoFinal.Text = dt.Rows[0]["SALDO_FINAL"].ToString();
                 txtObs.Text = dt.Rows[0]["OBSERVACION"].ToString();
 
-                
-                
 
             }
         }
@@ -172,7 +170,7 @@ namespace WindowsFormsApplication1
                     objint.v_tipo_cambio = tipo_cambio;
                     objint.v_sede = sede;
                     objint.ShowDialog();
-                    this.Visible = false;
+                    //this.Visible = false;
                    
                 }
             }
