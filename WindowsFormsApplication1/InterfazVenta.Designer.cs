@@ -160,8 +160,6 @@
             this.cboTIPO_DOC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTIPO_DOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTIPO_DOC.FormattingEnabled = true;
-            this.cboTIPO_DOC.Items.AddRange(new object[] {
-            "TICKET BOLETA"});
             this.cboTIPO_DOC.Location = new System.Drawing.Point(131, 41);
             this.cboTIPO_DOC.Name = "cboTIPO_DOC";
             this.cboTIPO_DOC.Size = new System.Drawing.Size(143, 28);

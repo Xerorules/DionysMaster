@@ -497,13 +497,7 @@ namespace WindowsFormsApplication1
             }
             
         }
-
-
-
-
         
-
-
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
@@ -602,18 +596,13 @@ namespace WindowsFormsApplication1
                     string IDMOV = txtID_MOVIMIENTO.Text;
                     string IDEMP = Properties.Settings.Default.id_empresa;
                     String url = String.Format("REPORTES/FRM_REPORTE_RECIBO_EGRESO_INGRESO.aspx?IDMOV={0}&IDEMP={1}", IDMOV, IDEMP);
-                    //Response.Redirect(url);
-                    /*-------------------------------------JAVASCRIPT--------------------------------------------------------*/
-                    //string s = "window.open('" + url + "', 'popup_window', 'width=700,height=400,left=10%,top=10%,resizable=yes');";
-                    //ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-                    /*------------------------------------------------------------------------------------------------------*/
-                   
+                
                 }
                 else //SINO GENERO LA IMPRESION DE LOS TICKET BOLETA
                 {
-                    /* AGREGAR AL FINAL */
+                  
                     P_IMPRIMIR_GRABAR();
-                    //IMPRIMIR_SPOOL(); //imprimo mi spool en mi impresora etiquetera
+                   
                 }
             }
         }
@@ -848,7 +837,8 @@ namespace WindowsFormsApplication1
         {
             if (rdbTICKET.Checked == true)
             {
-                P_IMPRIMIR_MOV_CAJA();//IMPRIMIR_SPOOL_TODOS_MOVCAJA(); //AQUI IMPRIMIMOS TODO LOS MOVIMIENTOS EN UN SOLO REPORTE O IMPRESION EN LA IMPRESORA ETICKETERA
+                /*P_IMPRIMIR_MOV_CAJA();*/
+                IMPRIMIR_SPOOL_TODOS_MOVCAJA(); //AQUI IMPRIMIMOS TODO LOS MOVIMIENTOS EN UN SOLO REPORTE O IMPRESION EN LA IMPRESORA ETICKETERA
             }
             else
             {
@@ -857,10 +847,8 @@ namespace WindowsFormsApplication1
             }
         }
 
-        /// IMPRESION TICKET
-        /// 
-        /// 
-
+        // IMPRESION TICKET
+       
         void P_IMPRIMIR_GRABAR()
         {
             string DIRECCION = "";
@@ -920,17 +908,12 @@ namespace WindowsFormsApplication1
             Ticket1.CortaTicket();
            
         }
-
-        ///
-        ///
-
-
+        
 
         void P_IMPRIMIR_MOV_CAJA()
         {
             string DIRECCION = "";
             string RUC = "";
-            //string ID_VENTA = "";
             string WEB = "";
             con.Open();
             SqlCommand cmv = new SqlCommand("SELECT DIRECCION,RUC,WEB_SITE FROM EMPRESA WHERE DESCRIPCION='" + Properties.Settings.Default.nomempresa + "'", con);
@@ -960,6 +943,7 @@ namespace WindowsFormsApplication1
             string totalmenosanul = "";
             string totalanul = "";
             string doctotal = "";
+            string totDoc = "";
             string docanul = "";
             string tvotros = "";
             string tvefectivo = "";
@@ -968,39 +952,108 @@ namespace WindowsFormsApplication1
             string total_eva = "";
             double saldoefectivo = 0;
 
+
             con.Open();
-            SqlCommand com = new SqlCommand("SELECT SUM(IMPORTE)," +
-            "SUM(IMPORTE) - (SELECT SUM(IMPORTE) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND FECHA_ANULADO != '')," +
-            "(SELECT COUNT(FECHA_INICIAL) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "')," +
-            "(SELECT TOTAL_ANULADO = SUM(IMPORTE) FROM V_CAJA_KADEX WHERE ID_CAJA = " + idcaja + " AND FECHA_ANULADO != '') ," +
-            "(SELECT ISNULL(COUNT(FECHA_ANULADO),0) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND FECHA_ANULADO != '')," +
-            "(SELECT ISNULL(SUM(IMPORTE), 0) FROM V_CAJA_KADEX WHERE  ID_CAJA = '" + idcaja + "' AND TP_DESCRIPCION != 'EFECTIVO')," +
-            "(SELECT ISNULL(SUM(IMPORTE),0) FROM V_CAJA_KADEX WHERE  ID_CAJA = '" + idcaja + "' AND TP_DESCRIPCION = 'EFECTIVO')," +
-            "(SELECT ISNULL(SUM(IMPORTE),0) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'IVA') ," +
-            "(SELECT ISNULL(SUM(IMPORTE),0) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'EGE') ," +
-            "(SELECT ISNULL(SUM(IMPORTE),0) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'EVA') " +
-            " FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "'", con);
+            SqlCommand com = new SqlCommand("SELECT	SUM(AMORTIZADO) TOTAL_VENTAS,SUM(IMPORTE_CAJA)," +
+                                 "(SELECT SUM(IMPORTE_CAJA) FROM V_CAJA_KADEX WHERE FECHA_ANULADO != '' AND ID_CAJA = '" + idcaja + "')," +
+                                 "(SELECT COUNT(FECHA_INICIAL) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "')," +
+                                 "(SELECT COUNT(FECHA_ANULADO) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND FECHA_ANULADO != '')," +
+                                 "(SELECT SUM(IMPORTE_CAJA) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'IVA')," +
+                                 "(SELECT SUM(IMPORTE_CAJA) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'EVA')," +
+                                 "(SELECT SUM(IMPORTE_CAJA) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND ID_TIPOMOV = 'EGE')," +
+                                 "(SELECT isnull(SUM(IMPORTE_CAJA), 0) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' AND TP_DESCRIPCION != 'EFECTIVO')" +
+                                 " FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "'", con);
+
             DataTable dtable = new DataTable();
             SqlDataAdapter dadap = new SqlDataAdapter(com);
             dadap.Fill(dtable);
             total = dtable.Rows[0][0].ToString();
             totalmenosanul = dtable.Rows[0][1].ToString();
-            totalanul = dtable.Rows[0][3].ToString();
-            doctotal = dtable.Rows[0][2].ToString();
+            totalanul = dtable.Rows[0][2].ToString();
+            doctotal = dtable.Rows[0][3].ToString();
             docanul = dtable.Rows[0][4].ToString();
-            tvotros = dtable.Rows[0][5].ToString();
-            tvefectivo = dtable.Rows[0][6].ToString();
-            total_iva = dtable.Rows[0][7].ToString();
-            total_ege = dtable.Rows[0][8].ToString();
-            total_eva = dtable.Rows[0][9].ToString();
-            saldoefectivo = (Double.Parse(tvefectivo) + Double.Parse(total_iva) - Double.Parse(total_ege) - Double.Parse(total_eva));
+            tvotros = dtable.Rows[0][8].ToString();
+            tvefectivo = dtable.Rows[0][0].ToString();
+            total_iva = dtable.Rows[0][5].ToString();
+            total_ege = dtable.Rows[0][7].ToString();
+            total_eva = dtable.Rows[0][6].ToString();
+            totDoc = (Convert.ToInt32(doctotal) - Convert.ToInt32(docanul)).ToString();
+            saldoefectivo = (Double.Parse(tvefectivo) + Double.Parse(total_iva) + Double.Parse(total_ege) + Double.Parse(total_eva));
             con.Close();
             /*-------------------------------------------------------------------------------------------------------------*/
 
+            int v_numero = 0;
+            int id_compvent = 0;
+            int totaltickets = 0;
+            string tofor = "";
+            con.Open();
+            SqlCommand COMND = new SqlCommand("SELECT TOP 1 VT.V_NUMERO, ID_COMPVENT,(SELECT COUNT(ID_COMPVENT) FROM V_CAJA_KADEX WHERE ID_CAJA = '" + idcaja + "' GROUP BY ID_CAJA)" +
+                                              "FROM V_CAJA_KADEX AS VC INNER JOIN V_TABLA_VENTAS AS VT ON  VC.ID_COMPVENT = VT.V_ID_VENTA WHERE ID_CAJA = '" + idcaja + "'" +
+                                              "ORDER BY V_NUMERO",con);
+            DataTable DT = new DataTable();
+            SqlDataAdapter DAT = new SqlDataAdapter(COMND);
+            DAT.Fill(DT);
+            v_numero = Convert.ToInt32(DT.Rows[0][0].ToString());
+            id_compvent = Convert.ToInt32(DT.Rows[0][1].ToString());
+            totaltickets = Convert.ToInt32(DT.Rows[0][2].ToString());
+            tofor = (v_numero + totaltickets).ToString("D7");
+            con.Close();
+            /*-------------------------------------------------------------------------------------------------------------*/
+            /*-------------------------------------------------------------------------------------------------------------*/
 
+            v_numero = Convert.ToInt32(DT.Rows[0][0].ToString());
+            id_compvent = Convert.ToInt32(DT.Rows[0][1].ToString());
+            totaltickets = Convert.ToInt32(DT.Rows[0][2].ToString());
+            tofor = (v_numero + totaltickets).ToString("D7");
 
-
-
+            double cantTB = 0;
+            double cantBV = 0;
+            double cantFV = 0;
+            double initb = 0;
+            double fintb = 0;
+            double inibv = 0;
+            double finbv = 0;
+            double inifv = 0;
+            double finfv = 0;
+            con.Open();
+            SqlCommand comand = new SqlCommand("SELECT  VT.V_TIPO_DOC, VT.V_NUMERO, ID_COMPVENT FROM V_CAJA_KADEX AS VC"+
+                                               " INNER JOIN V_TABLA_VENTAS AS VT ON  VC.ID_COMPVENT = VT.V_ID_VENTA"+
+                                               " WHERE ID_CAJA = '" + idcaja + "' ORDER BY V_TIPO_DOC", con);
+            DataTable datatable = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(comand);
+            adapter.Fill(datatable);
+            for (int i = 0;i<datatable.Rows.Count;i++)
+            {
+                if (datatable.Rows[i][0].ToString() == "TB")
+                {
+                    cantTB = cantTB + 1;
+                    if (initb == 0)
+                    {
+                        initb = Convert.ToDouble(datatable.Rows[i][1].ToString());
+                    }
+                }
+                if (datatable.Rows[i][0].ToString() == "BV")
+                {
+                    cantBV = cantBV + 1;
+                    if (inibv == 0)
+                    {
+                        inibv = Convert.ToDouble(datatable.Rows[i][1].ToString());
+                    }
+                }
+                if (datatable.Rows[i][0].ToString() == "FV")
+                {
+                    cantFV = cantFV + 1;
+                    if (inifv == 0)
+                    {
+                        inifv = Convert.ToDouble(datatable.Rows[i][1].ToString());
+                    }
+                }
+            }
+            fintb = initb + cantTB;
+            finbv = inibv + cantBV;
+            finfv = inifv + cantFV;
+            con.Close();
+           
             CreaTicket Ticket1 = new CreaTicket();
             Ticket1.impresora = "BIXOLON SRP-270";
 
@@ -1018,8 +1071,27 @@ namespace WindowsFormsApplication1
             Ticket1.LineasGuion(); // imprime una linea de guiones
 
             /*--------------PRUEBA DETALLE CAJA-------------*/
+            if (fintb != 0)///CORREGIR
+            {
+                Ticket1.TextoCentro("TB DESDE: " + Properties.Settings.Default.serie + "-" + initb.ToString("0000000"));
+                Ticket1.TextoCentro("TB HASTA: " + Properties.Settings.Default.serie + "-" + fintb.ToString("0000000"));
+                Ticket1.TextoCentro("");
+            }
+            if (finbv != 0)///CORREGIR
+            {
+                Ticket1.TextoCentro("BV DESDE: " + Properties.Settings.Default.serie + "-" + inibv.ToString("0000000"));
+                Ticket1.TextoCentro("BV HASTA: " + Properties.Settings.Default.serie + "-" + finbv.ToString("0000000"));
+                Ticket1.TextoCentro("");
+            }
+            if (finfv != 0)///CORREGIR
+            {
+                Ticket1.TextoCentro("FV DESDE: " + Properties.Settings.Default.serie + "-" + inifv.ToString("0000000"));
+                Ticket1.TextoCentro("FV HASTA: " + Properties.Settings.Default.serie + "-" + finfv.ToString("0000000"));
+                Ticket1.TextoCentro("");
+            }
+            
             Ticket1.TextoCentro("TOTAL ANULADOS: " + docanul + " DOC  S/. " + totalanul);
-            Ticket1.TextoCentro("TOTAL VENTAS: " + doctotal + " DOC  S/. " + total);
+            Ticket1.TextoCentro("TOTAL VENTAS: " + totDoc + " DOC  S/. " + total);
             Ticket1.TextoCentro("");
             Ticket1.TextoCentro("T.V. EFECTIVO: " + tvefectivo);
             Ticket1.TextoCentro("T.V. OTROS: " + tvotros);
@@ -1048,19 +1120,10 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro("V.B: ADMINISTRACION");
             Ticket1.TextoCentro("FECHA IMPRESION : " + DateTime.Now.ToString());
 
-            /*-------------------------------////////-------*/
             Ticket1.CortaTicket();
           
-
         }
-
-        ///
-        ///
-
-
-
-
-
+        
         void IMPRIMIR_SPOOL_TODOS_MOVCAJA()
         {
             DataTable DATOS_EMPRESA = new DataTable();
@@ -1080,20 +1143,24 @@ namespace WindowsFormsApplication1
             // ========================================================================================
 
 
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "---- REPORTE DE CAJA ----", "1");
+            CreaTicket Ticket1 = new CreaTicket();
+            Ticket1.impresora = "BIXOLON SRP-270";
+
+            Ticket1.TextoCentro("---- REPORTE DE CAJA ----");
+            Ticket1.TextoCentro(Properties.Settings.Default.nomempresa);
+            Ticket1.TextoCentro("RUC: " + DATOS_EMPRESA.Rows[0]["RUC"].ToString());
+            Ticket1.TextoCentro(DATOS_EMPRESA.Rows[0]["DIRECCION"].ToString());
+            Ticket1.LineasGuion(); // imprime una linea de guiones
+            Ticket1.TextoCentro(Properties.Settings.Default.nomsede);
+            Ticket1.TextoCentro("PV: " + Properties.Settings.Default.punto_venta + " " + DATOS_CAJA_KARDEX.Rows[0]["PV_DESCRIPCION"].ToString());
+            Ticket1.TextoCentro("FECHA APERTURA: " + Properties.Settings.Default.fecha_apertura_caja);
+            Ticket1.LineasGuion(); // imprime una linea de guiones
+
+            Ticket1.TextoCentro("---- DETALLE INGRESOS POR VENTA ----");
+            Ticket1.LineasGuion(); // imprime una linea de guiones
 
             //AQUI ESTOY OBTENIENDO TODOS LOS DATOS DE LA EMPRESA
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, DATOS_EMPRESA.Rows[0]["DESCRIPCION"].ToString(), "1");      //aqui va el nombre de la empresa
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "RUC: " + DATOS_EMPRESA.Rows[0]["RUC"].ToString(), "1");    //aqui va el ruc de la empresa
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "DIRECCION: " + DATOS_EMPRESA.Rows[0]["DIRECCION"].ToString(), "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, DATOS_EMPRESA.Rows[0]["UBIDSN"].ToString() + "-" + DATOS_EMPRESA.Rows[0]["UBIPRN"].ToString() + "-" + DATOS_EMPRESA.Rows[0]["UBIDEN"].ToString(), "1"); //DISTRITO PROVINCIA Y DEPARTAMENTO
-            //AQUI ESTOY OBTENIENDO TODOS LOS DATOS DE LA SEDE
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");                                        //imprime una linea de guiones
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "SEDE: " + DATOS_SEDE.Rows[0]["ID_SEDE"].ToString() + " " + DATOS_SEDE.Rows[0]["DESCRIPCION"].ToString(), "1"); //aqui va el codigo y el nombre de la sede de la empresa 
-            //AQUI ESTOY OBTENIENDO TODOS LOS DATOS DEL PUNTO DE VENTA
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "PV: " + Properties.Settings.Default.punto_venta + " " + Properties.Settings.Default.punto_venta, "1");                 //aqui va el codigo y el nombre del punto de venta
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "FECHA APERTURA: " + Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[0]["FECHA_INICIAL"]).ToString("dd/MM/yy"), "1");          //FECHA_INICIAL
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");
+   
 
             string ANULADO = string.Empty;
             double TOTALANU = 0.00;
@@ -1104,9 +1171,10 @@ namespace WindowsFormsApplication1
             double IVA_EFECTIVO = 0.00, EGE_EFECTIVO = 0.00;
 
             //GENERAR LOS REGISTROS DE INGRESOS POR VENTA
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "---DETALLE INGRESOS POR VENTA---", "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "FECHA   TIPMOV   # DOC    M   IMPORTE A", "1");
+
+            Ticket1.TextoCentro("");
+
+            Ticket1.TextoCentro("FECHA  TPAGO TDOC # DOC        M  IMPORTE A");
             for (int i = 0; i < DATOS_CAJA_KARDEX.Rows.Count; i++)
             {
                 ANULADO = " ";
@@ -1121,10 +1189,36 @@ namespace WindowsFormsApplication1
                 //==============================================================================================================
                 //OBTENGO EL VALOR DE MI CAMPO ID_TIPOMOV PARA VERIFICAR SI TIENE DATO O NO , PARA REALIZAR LA COMPARACIONES
                 string varID_TIPOPAGO = DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOPAGO"].ToString();
+                string tipo_pago = DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOPAGO"].ToString();
+                string Corte = "";
                 if (varMOVIMIENTO == "IPV")
                 {
-                    N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + " " + DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString() + " " +
-                    DATOS_CAJA_KARDEX.Rows[i]["NUMERO"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() + " " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + " " + ANULADO, "1");
+                    if (tipo_pago == "0001")
+                    {
+                        Corte = "E";
+                    }
+                    else if (tipo_pago == "0002")
+                    {
+                        Corte = "T";
+                    }
+                    else if (tipo_pago == "0003")
+                    {
+                        Corte = "T";
+                    }
+                    else if (tipo_pago == "0004")
+                    {
+                        Corte = "D";
+                    }
+                    else if (tipo_pago == "0005")
+                    {
+                        Corte = "T";
+                    }
+                    else if (tipo_pago == "0006")
+                    {
+                        Corte = "C";
+                    }
+                    Ticket1.TextoIzquierda(Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + "  " + Corte + " " + DATOS_CAJA_KARDEX.Rows[i]["TIPO_DOCU"].ToString() + "  " +
+                    DATOS_CAJA_KARDEX.Rows[i]["NUMERO"].ToString() + " " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() +"    " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + " " + ANULADO);
                 }
 
                 //AQUI PROCESO LA INFORMACION PARA OBTENER LAS SUMAS DE LOS INGRESOS POR VENTA EN EFECTIVO Y QUE NO ESTEN ANULADOS
@@ -1147,18 +1241,16 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "TOTAL ANULADOS : " + CONTANU + " DOC  S/. " + TOTALANU.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE ANULADOS
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "TOTAL VENTAS   : " + CONTTOTAL + " DOC  S/. " + (IPV_EFECTIVO + IPV_EFECTIVO_OTROS).ToString("N2"), "1");//IMPRIMIENDO TOTAL DE ANULADOS
-
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");                          // imprime una espacio
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "T.V. EFECTIVO (S/.): " + IPV_EFECTIVO.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "T.V. OTROS (S/.): " + IPV_EFECTIVO_OTROS.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
-
-            //GENERAR LOS REGISTROS DE INGRESOS VARIOS
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");                          // imprime una espacio
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-----DETALLE INGRESOS OTROS-----", "1");
-
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("TOTAL ANULADOS: " + CONTANU + " DOC  S/. " + TOTALANU.ToString("N2"));
+            Ticket1.TextoCentro("TOTAL VENTAS: " + CONTTOTAL + " DOC  S/. " + (IPV_EFECTIVO + IPV_EFECTIVO_OTROS).ToString("N2"));
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("T.V. EFECTIVO: S/. " + IPV_EFECTIVO.ToString("N2"));
+            Ticket1.TextoCentro("T.V. OTROS: S/. " + IPV_EFECTIVO_OTROS.ToString("N2"));
+            
+            Ticket1.TextoCentro("");                        // imprime una espacio
+            Ticket1.TextoCentro("-----DETALLE INGRESOS OTROS-----");
+            Ticket1.TextoCentro("");
             for (int i = 0; i < DATOS_CAJA_KARDEX.Rows.Count; i++)
             {
                 ANULADO = " ";
@@ -1170,8 +1262,8 @@ namespace WindowsFormsApplication1
                 string varID_TIPOMOV = DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString(); //OBTENGO EL VALOR DE MI CAMPO ID_COMVENTA PARA VERIFICAR SI TIENE DATO O NO , PARA REALIZAR LA COMPARACIONES
                 if (varID_TIPOMOV == "IVA")
                 {
-                    N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + " " + DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString() + " " +
-                    DATOS_CAJA_KARDEX.Rows[i]["ID_MOVIMIENTO"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + " " + ANULADO, "1");
+                    Ticket1.TextoCentro(Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + " " + DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString() + " " +
+                    DATOS_CAJA_KARDEX.Rows[i]["ID_MOVIMIENTO"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + "      " + ANULADO);
                 }
 
                 //AQUI CALCULO EL TOTAL DE LOS EGRESOS GERENCIA
@@ -1182,14 +1274,13 @@ namespace WindowsFormsApplication1
                 }
 
             }
-
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");                          // imprime una espacio
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "TOTAL IVA : " + IVA_EFECTIVO.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
+            Ticket1.TextoCentro("");                         // imprime una espacio
+            Ticket1.TextoCentro("TOTAL IVA : S/. " + IVA_EFECTIVO.ToString("N2"));//IMPRIMIENDO TOTAL DE EFECTIVO
 
             //GENERAR LOS REGISTROS DE EGRESOS
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");                          // imprime una espacio
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-------DETALLE DE EGRESOS-------", "1");
-
+            Ticket1.TextoCentro("");                        // imprime una espacio
+            Ticket1.TextoCentro("-------DETALLE DE EGRESOS-------");
+            Ticket1.TextoCentro("");
             for (int i = 0; i < DATOS_CAJA_KARDEX.Rows.Count; i++)
             {
                 ANULADO = " ";
@@ -1202,8 +1293,8 @@ namespace WindowsFormsApplication1
 
                 if (varID_TIPOMOV == "EGE" || varID_TIPOMOV == "EVA")
                 {
-                    N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + " " + DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString() + " " +
-                    DATOS_CAJA_KARDEX.Rows[i]["ID_MOVIMIENTO"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + " " + ANULADO, "1");
+                    Ticket1.TextoCentro(Convert.ToDateTime(DATOS_CAJA_KARDEX.Rows[i]["FECHA"]).ToString("dd/MM/yy") + " " + DATOS_CAJA_KARDEX.Rows[i]["ID_TIPOMOV"].ToString() + " " +
+                    DATOS_CAJA_KARDEX.Rows[i]["ID_MOVIMIENTO"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["MONEDA"].ToString() + "  " + DATOS_CAJA_KARDEX.Rows[i]["IMPORTE"].ToString() + " " + ANULADO);
                 }
 
                 //AQUI CALCULO EL TOTAL DE LOS EGRESOS GERENCIA
@@ -1221,28 +1312,28 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");                          // imprime una espacio
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "TOTAL EGE: " + EGE_EFECTIVO.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "TOTAL EVA: " + EVA_EFECTIVO.ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");                          // imprime una linea de guiones
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "SALDO EFECTIVO CAJA: " + ((IPV_EFECTIVO + IVA_EFECTIVO) - (EGE_EFECTIVO + EVA_EFECTIVO)).ToString("N2"), "1");//IMPRIMIENDO TOTAL DE EFECTIVO
-                                                                                                                                                                                             //=======================================================================================================================================================
+            Ticket1.TextoCentro("");                          // imprime una espacio
+            Ticket1.TextoCentro("TOTAL EGE: S/. " + EGE_EFECTIVO.ToString("N2"));//IMPRIMIENDO TOTAL DE EFECTIVO
+            Ticket1.TextoCentro("TOTAL EVA: S/. " + EVA_EFECTIVO.ToString("N2"));//IMPRIMIENDO TOTAL DE EFECTIVO
+            Ticket1.TextoCentro("");
+            Ticket1.LineasGuion();                         // imprime una linea de guiones
+            Ticket1.TextoCentro("SALDO EFECTIVO CAJA: S/. " + ((IPV_EFECTIVO + IVA_EFECTIVO) - (EGE_EFECTIVO + EVA_EFECTIVO)).ToString("N2"));//IMPRIMIENDO TOTAL DE EFECTIVO
+            Ticket1.LineasGuion();                                                                                                                 //=======================================================================================================================================================
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("");
+            Ticket1.LineasGuion();                           // imprime una linea de guiones
+            Ticket1.TextoCentro("V.B: " + Properties.Settings.Default.nomempleado); // obtenemos el NOMBRE DEL EMPLEADO
+            Ticket1.TextoCentro("  " + Properties.Settings.Default.id_empleado); // obtenemos el USUARIO/DNI DEL EMPLEADO
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("");
+            Ticket1.TextoCentro("");
+            Ticket1.LineasGuion();                            // imprime una linea de guiones
+            Ticket1.TextoCentro("V.B: ADMINISTRACION");
+            Ticket1.TextoCentro("FECHA IMPRESION : " + DateTime.Now.ToShortDateString()); //formato de fecha g = 6/15/2008 9:15 PM
+            Ticket1.CortaTicket();
 
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");                          // imprime una linea de guiones
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "V.B: " + Properties.Settings.Default.nomempleado, "1"); // obtenemos el NOMBRE DEL EMPLEADO
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "  " + Properties.Settings.Default.id_empleado, "1"); // obtenemos el USUARIO/DNI DEL EMPLEADO
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, string.Empty, "1");
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "-", "1");                          // imprime una linea de guiones
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "V.B: ADMINISTRACION", "1");
-
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "FECHA IMPRESION : " + DateTime.Now.ToString("g"), "1"); //formato de fecha g = 6/15/2008 9:15 PM
-            N_OBJVENTAS.SPOOL_ETIQUETERA(Properties.Settings.Default.punto_venta, "CORTATICKET", "1");                          // imprime una linea de guiones
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

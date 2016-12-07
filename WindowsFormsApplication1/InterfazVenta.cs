@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1
         public string bc_id_cliente;
         public string bc_ruc_dni;
         public string bc_descripcion;
-        
+
         #endregion
 
         public string[] valor = new string[20];
@@ -56,15 +56,15 @@ namespace WindowsFormsApplication1
         public String MON = "";
         public String WEB = "";
         public double VUELTO = 0.00, PAGA = 0.00;
-        
-        
+
+
         //public DataTable detallebien = new DataTable();
         public DataTable vPdt_detBien = new DataTable();
 
         public InterfazVenta()
         {
             InitializeComponent();
-            
+
         }
 
         private void InterfazVenta_Load(object sender, EventArgs e)
@@ -77,13 +77,14 @@ namespace WindowsFormsApplication1
             lblFecha.Text = DateTime.Today.ToShortDateString();
             txtCLIENTE_ID.Enabled = false;
             TIPO_PAGO();
+            TIPO_DOC();
             LLENAR_CLASE_BIEN();
             LLENAR_MENU_BIENES();
             ESTRUCTURA_DETALLEBIEN();
             lblCajaIDVentas.Text = Properties.Settings.Default.id_caja;
             dgvBIEN_VENTA.Visible = false;
             LLENAR_GRILLA();
-           // DataTable vPdt_detBien = (DataTable)detalle;
+            // DataTable vPdt_detBien = (DataTable)detalle;
 
             /*----------*/
             //crea boton Eliminar en el gridview
@@ -93,25 +94,25 @@ namespace WindowsFormsApplication1
             colBotonEliminar.Text = "Eliminar";
             colBotonEliminar.UseColumnTextForButtonValue = true;
             this.dgvBIEN_VENTA.Columns.Add(colBotonEliminar);
-                        
+
             /*-------------------------------------------------------------------------------------------*/
             txtCANTIDAD_VENTA.Text = "1";
-                txtPRECIO_VENTA.Text = string.Empty;
-            
-                 if (v_id_bien != string.Empty)  //AQUI EJECUTO EL LLENADO DEL BIEN SI ESQUE UBIERAN DATOS QUE REGISTRAR
-                 {
+            txtPRECIO_VENTA.Text = string.Empty;
+
+            if (v_id_bien != string.Empty)  //AQUI EJECUTO EL LLENADO DEL BIEN SI ESQUE UBIERAN DATOS QUE REGISTRAR
+            {
 
                 OBTENER_ID_BIEN_Y_LLENAR_GRILLA(v_id_bien, v_desc_bien, v_precio_bien);
 
-                        v_id_bien = string.Empty;
-                        v_desc_bien = string.Empty;
-                        v_precio_bien = string.Empty;
-                 }
-                
-                 LLENAR_GRILLA(); //ESTO PERMITE QUE SE MUESTRE LOS DATOS DE LA GRILLA A PESAR QUE SE AGA EL AUTOPOSBAC
-                 ACTUALIZAR_TOTALES(); //ESTO DEVUELVE LA ACTUALIZACION DE TOTALES
-             }
-             
+                v_id_bien = string.Empty;
+                v_desc_bien = string.Empty;
+                v_precio_bien = string.Empty;
+            }
+
+            LLENAR_GRILLA(); //ESTO PERMITE QUE SE MUESTRE LOS DATOS DE LA GRILLA A PESAR QUE SE AGA EL AUTOPOSBAC
+            ACTUALIZAR_TOTALES(); //ESTO DEVUELVE LA ACTUALIZACION DE TOTALES
+        }
+
 
 
         #region OBJETOS
@@ -124,12 +125,12 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-       
+
 
 
         void LLENAR_CLASE_BIEN()
         {
-           
+
             if ((v_id_puntoventa == "PV003") || (v_id_puntoventa == "PV008") || (v_id_puntoventa == "PV009"))
             { //AQUI VAN LOS BIENES PARA RESTAURANT
 
@@ -146,7 +147,7 @@ namespace WindowsFormsApplication1
                 cboCLASE_BIEN.ValueMember = "value";
                 cboCLASE_BIEN.SelectedIndex = 0;
                 cboTIPO_DOC.SelectedIndex = 0;
-                
+
             }
             else
             {
@@ -163,23 +164,40 @@ namespace WindowsFormsApplication1
 
         void TIPO_PAGO()
         {
-            
-                List<ListaTipoProd> List = new List<ListaTipoProd>();
 
-                List.Add(new ListaTipoProd { texto = "EFECTIVO", value = "0001" });
-                List.Add(new ListaTipoProd { texto = "TARJETA CREDITO", value = "0002" });
-                List.Add(new ListaTipoProd { texto = "TARJETA DEBITO", value = "0003" });
-                List.Add(new ListaTipoProd { texto = "DEPOSITO BANCARIO", value = "0004" });
-                List.Add(new ListaTipoProd { texto = "TRANSFERENCIA BANCARIA", value = "0005" });
-            List.Add(new ListaTipoProd { texto = "CHEQUE BANCARIO", value="0006"});
+            List<ListaTipoProd> List = new List<ListaTipoProd>();
 
-                cboTIPOPAGO.DataSource = List;
-                cboTIPOPAGO.DisplayMember = "texto";
-                cboTIPOPAGO.ValueMember = "value";
-                cboTIPOPAGO.SelectedIndex = 0;
-               
+            List.Add(new ListaTipoProd { texto = "EFECTIVO", value = "0001" });
+            List.Add(new ListaTipoProd { texto = "TARJETA CREDITO", value = "0002" });
+            List.Add(new ListaTipoProd { texto = "TARJETA DEBITO", value = "0003" });
+            List.Add(new ListaTipoProd { texto = "DEPOSITO BANCARIO", value = "0004" });
+            List.Add(new ListaTipoProd { texto = "TRANSFERENCIA BANCARIA", value = "0005" });
+            List.Add(new ListaTipoProd { texto = "CHEQUE BANCARIO", value = "0006" });
+
+            cboTIPOPAGO.DataSource = List;
+            cboTIPOPAGO.DisplayMember = "texto";
+            cboTIPOPAGO.ValueMember = "value";
+            cboTIPOPAGO.SelectedIndex = 0;
+
         }
-        
+
+        void TIPO_DOC()
+        {
+
+            List<ListaTipoProd> List = new List<ListaTipoProd>();
+
+            List.Add(new ListaTipoProd { texto = "TICKET BOLETA", value = "TB" });
+            List.Add(new ListaTipoProd { texto = "BOLETA VENTA", value = "BV" });
+            List.Add(new ListaTipoProd { texto = "FACTURA VENTA", value = "FV" });
+
+
+            cboTIPO_DOC.DataSource = List;
+            cboTIPO_DOC.DisplayMember = "texto";
+            cboTIPO_DOC.ValueMember = "value";
+            cboTIPO_DOC.SelectedIndex = 0;
+
+        }
+
 
 
         void LLENAR_MENU_BIENES()
@@ -226,7 +244,7 @@ namespace WindowsFormsApplication1
 
         void ESTRUCTURA_DETALLEBIEN()
         {
-            
+
             DataColumn colum = vPdt_detBien.Columns.Add("ID_BIEN", typeof(String));
             colum.Unique = true;
             vPdt_detBien.Columns.Add(new DataColumn("CANT", typeof(double)));
@@ -235,7 +253,7 @@ namespace WindowsFormsApplication1
             vPdt_detBien.Columns.Add(new DataColumn("IMPORTE", typeof(Double)));
             vPdt_detBien.PrimaryKey = new DataColumn[] { vPdt_detBien.Columns[0] };
             //estructura de la tabladetalle
-            
+
         }
 
         void OBTENER_ID_BIEN_Y_LLENAR_GRILLA(string ID_BIEN, string DESCRIPCION, string PRECIO)
@@ -260,7 +278,7 @@ namespace WindowsFormsApplication1
                 row["IMPORTE"] = Convert.ToDouble(row["PRECIO"]) * Convert.ToDouble(row["CANT"]);
                 dt.Rows.Add(row);
                 dt.AcceptChanges();
-                
+
                 LLENAR_GRILLA();
                 ACTUALIZAR_TOTALES();
 
@@ -282,7 +300,7 @@ namespace WindowsFormsApplication1
         {
             DataTable dt = vPdt_detBien;
             dgvBIEN_VENTA.DataSource = dt;
-            
+
         }
 
         public void ACTUALIZAR_TOTALES()
@@ -301,7 +319,7 @@ namespace WindowsFormsApplication1
             lblSUBTOTAL.Text = subTotal.ToString("N2");
             lblIGV.Text = igv.ToString("N2");
             lblTOTAL.Text = total.ToString("N2");
-            
+
         }
         /*-----------------------AUTOCOMPLETAR---------------------------*/
         void autocompletar_DESCRIPCION()
@@ -314,16 +332,16 @@ namespace WindowsFormsApplication1
                 txtCLIENTE_RUC.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 AutoCompleteStringCollection col = new AutoCompleteStringCollection();
                 AutoCompleteStringCollection ruc = new AutoCompleteStringCollection();
-                
+
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT DESCRIPCION FROM CLIENTE", con);
-               /* DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);*/
+                /* DataTable dt = new DataTable();
+                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                 da.Fill(dt);*/
                 SqlDataReader dr = null;
-                
+
                 dr = cmd.ExecuteReader();
-                
+
                 while (dr.Read())
                 {
                     col.Add(dr["DESCRIPCION"].ToString());
@@ -332,7 +350,8 @@ namespace WindowsFormsApplication1
                 txtCLIENTE_VENTA.AutoCompleteCustomSource = col;
                 con.Close();
                 con.Open();
-                if (txtCLIENTE_VENTA.Text.Length >= 6) {
+                if (txtCLIENTE_VENTA.Text.Length >= 6)
+                {
                     SqlCommand cmv = new SqlCommand("SELECT ID_CLIENTE,RUC_DNI,DIRECCION FROM CLIENTE where DESCRIPCION = '" + txtCLIENTE_VENTA.Text + "'", con);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmv);
@@ -341,7 +360,8 @@ namespace WindowsFormsApplication1
                     txtCLIENTE_RUC.Text = dt.Rows[0][1].ToString();
                     LBLDIRECCION.Text = dt.Rows[0][2].ToString();
                     con.Close();
-                } else { con.Close();}
+                }
+                else { con.Close(); }
             }
 
             catch
@@ -354,7 +374,7 @@ namespace WindowsFormsApplication1
             try
             {
 
-                
+
                 txtCLIENTE_RUC.AutoCompleteMode = AutoCompleteMode.Suggest;
                 txtCLIENTE_RUC.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 AutoCompleteStringCollection col = new AutoCompleteStringCollection();
@@ -364,7 +384,7 @@ namespace WindowsFormsApplication1
                     con.Open();
                 }
                 SqlCommand cmd = new SqlCommand("SELECT RUC_DNI FROM CLIENTE", con);
-                
+
                 SqlDataReader dr = null;
 
                 dr = cmd.ExecuteReader();
@@ -377,7 +397,7 @@ namespace WindowsFormsApplication1
                 txtCLIENTE_RUC.AutoCompleteCustomSource = col;
                 con.Close();
                 con.Open();
-                if (txtCLIENTE_RUC.Text.Length >=4)
+                if (txtCLIENTE_RUC.Text.Length >= 4)
                 {
                     SqlCommand cmv = new SqlCommand("SELECT ID_CLIENTE,DESCRIPCION FROM CLIENTE where RUC_DNI = '" + txtCLIENTE_RUC.Text + "'", con);
                     DataTable dt = new DataTable();
@@ -409,7 +429,7 @@ namespace WindowsFormsApplication1
             txtCLIENTE_VENTA.Text = string.Empty;
             txtCLIENTE_ID.Text = string.Empty;
             txtCLIENTE_RUC.Text = string.Empty;
-            
+
         }
 
         #region
@@ -573,7 +593,7 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        
+
         public void Eliminar_Registro(String cod)
         {
             DataTable dt = (DataTable)vPdt_detBien;
@@ -594,21 +614,17 @@ namespace WindowsFormsApplication1
 
         private void dgvBIEN_VENTA_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-           
-            if (this.dgvBIEN_VENTA.Columns[e.ColumnIndex].Name == "colBotonEliminar")
-                {
-                    
-                    
-                    dgvBIEN_VENTA.Rows.RemoveAt(e.RowIndex);
-                    DataTable dt = (DataTable)vPdt_detBien;
-                    dt.Rows.RemoveAt(e.RowIndex);
-                    
 
-                
-                }
+
+            if (this.dgvBIEN_VENTA.Columns[e.ColumnIndex].Name == "colBotonEliminar") //boton eliminar detro del gridview
+            {
+                dgvBIEN_VENTA.Rows.RemoveAt(e.RowIndex);
+                DataTable dt = (DataTable)vPdt_detBien;
+                dt.Rows.RemoveAt(e.RowIndex);
+
+            }
             ACTUALIZAR_TOTALES();
-            
+
         }
 
         /*------------------------------------PARTE VENTAS---------------------------------------*/
@@ -618,7 +634,7 @@ namespace WindowsFormsApplication1
             {
                 E_OBJMANT_VENTADET.ID_VENTA = string.Empty;
                 E_OBJMANT_VENTADET.SERIE = Properties.Settings.Default.serie;
-                E_OBJMANT_VENTADET.TIPO_DOC = cboTIPO_DOC.SelectedItem.ToString();
+                E_OBJMANT_VENTADET.TIPO_DOC = cboTIPO_DOC.SelectedValue.ToString();
                 E_OBJMANT_VENTADET.MONEDA = "S";
                 E_OBJMANT_VENTADET.VALOR_VENTA = Convert.ToDouble(lblSUBTOTAL.Text);
                 E_OBJMANT_VENTADET.IGV = Convert.ToDouble(lblIGV.Text);
@@ -632,7 +648,7 @@ namespace WindowsFormsApplication1
 
                 N_OBJVENTAS.MANTENIMIENTO_VENTA(E_OBJMANT_VENTADET); //AQUI CARGO LA VENTA
                 MANTENIMIENTO_VENTADETALLE();// AQUI CARGO EL DETALLE DE LA VENTA
-                
+
                 MANTENIMIENTO_CAJA_KARDEX();//AQUI LLAMO A MI PROCEDIMIENTO PAR GENERAR EL INGRESO EN CAJA KARDEX
                 P_IMPRIMIR();
                 //IMPRIMIR_SPOOL();   /*<<<<<<<FALTA IMPLEMENTAR IMPRIMIR>>>>>>*/
@@ -641,13 +657,13 @@ namespace WindowsFormsApplication1
             catch (Exception)
             {
 
-                
+
                 MessageBox.Show("REGISTRA TODOS LOS CAMPOS NECESARIOS PARA LA VENTA", "Alerta de Venta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 
             LIMPIAR_VENTA();
-            
+
 
         }
 
@@ -660,9 +676,9 @@ namespace WindowsFormsApplication1
             lblIGV.Text = string.Empty;
             lblTOTAL.Text = string.Empty;
             txtPAGA.Text = string.Empty;
-            
+
             dt.Clear();
-            
+
 
         }
 
@@ -678,9 +694,9 @@ namespace WindowsFormsApplication1
                     E_OBJMANT_VENTADET.ID_VENTA = E_OBJMANT_VENTADET.ID_VENTA;
                     E_OBJMANT_VENTADET.ID_BIEN = dgvBIEN_VENTA.Rows[i].Cells[0].Value.ToString();
                     E_OBJMANT_VENTADET.ITEM = i + 1;
-                   // Label can = dgvBIEN_VENTA.Rows[i].FindControl("Label1") as Label;
+                    // Label can = dgvBIEN_VENTA.Rows[i].FindControl("Label1") as Label;
                     E_OBJMANT_VENTADET.CANTIDAD = Convert.ToDouble(dgvBIEN_VENTA.Rows[i].Cells[1].Value.ToString());
-                   // Label pre = dgvBIEN_VENTA.Rows[i].FindControl("Label2") as Label;
+                    // Label pre = dgvBIEN_VENTA.Rows[i].FindControl("Label2") as Label;
                     E_OBJMANT_VENTADET.PRECIO = Convert.ToDouble(dgvBIEN_VENTA.Rows[i].Cells[3].Value.ToString());
                     E_OBJMANT_VENTADET.IMPORTE = Convert.ToDouble(dgvBIEN_VENTA.Rows[i].Cells[4].Value.ToString());
                     E_OBJMANT_VENTADET.SALDO_CANTIDAD = 0.00;
@@ -780,7 +796,7 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (VALIDAR_DATOS())  
+            if (VALIDAR_DATOS())
             {
 
                 if (txtPAGA.Text.ToString() != string.Empty)
@@ -790,7 +806,7 @@ namespace WindowsFormsApplication1
                         double TOTAL = Convert.ToDouble(lblTOTAL.Text);
                         PAGA = Convert.ToDouble(txtPAGA.Text);
                         VUELTO = Convert.ToDouble(Convert.ToDouble(PAGA - TOTAL).ToString("N2"));
-                        
+
                     }
                     else
                     {
@@ -804,20 +820,20 @@ namespace WindowsFormsApplication1
                 if (result == DialogResult.OK)
                 {
                     MANTENIMIENTO_VENTA();
-                   
+
                     cboTIPO_DOC.SelectedIndex = 0;//REGRESANDO EL TIPO DE DOC A BOLETA DE VENTA
                     cboCLASE_BIEN.SelectedIndex = 0;
                     txtCLIENTE_ID.Text = string.Empty;
                     txtCLIENTE_RUC.Text = string.Empty;
                     txtCLIENTE_VENTA.Text = string.Empty;
-                    
+
                 }
                 else if (result == DialogResult.Cancel)
                 {
                     txtCLIENTE_ID.Text = string.Empty;
                     txtCLIENTE_RUC.Text = string.Empty;
                     txtCLIENTE_VENTA.Text = string.Empty;
-                    
+
                 }
 
                 LIMPIAR_VENTA();
@@ -944,7 +960,7 @@ namespace WindowsFormsApplication1
 
         void P_IMPRIMIR()
         {
-            string DIRECCION="";
+            string DIRECCION = "";
             string RUC = "";
             string ID_VENTA = "";
             string NUMERO = "";
@@ -966,7 +982,7 @@ namespace WindowsFormsApplication1
             lblSerie.Text = Properties.Settings.Default.serie;
             con.Close();
 
-            
+
 
 
             CreaTicket Ticket1 = new CreaTicket();
@@ -980,14 +996,14 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro(DIRECCION);
             Ticket1.LineasGuion(); // imprime una linea de guiones
 
-            Ticket1.TextoCentro("MAQ. REG: "+MAQREG);
+            Ticket1.TextoCentro("MAQ. REG: " + MAQREG);
             Ticket1.TextoCentro(DateTime.Now.ToString());
 
             string TIP_DOC;
             TIP_DOC = cboTIPO_DOC.Text;
 
             //P_SERIE_Y_NUMERO_CORRELATIVO_POR_PTOVENTA(TIP_DOC, CBOPTOVENTA.Text);
-            Ticket1.TextoCentro("TICKET: " + "TB" + " " + Properties.Settings.Default.serie +"-" + NUMERO);
+            Ticket1.TextoCentro("TICKET: " + "TB" + " " + Properties.Settings.Default.serie + "-" + NUMERO);
             Ticket1.LineasGuion();
 
 
@@ -1022,10 +1038,10 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro("PAGINA WEB: " + WEB);
             Ticket1.TextoCentro("ID VENTA: " + ID_VENTA);
 
-           
-            
 
-           // Ticket1.TextoCentro(WEB);
+
+
+            // Ticket1.TextoCentro(WEB);
             // imprime linea con total
             Ticket1.LineasGuion();
             Ticket1.TextoCentro("Agradecemos su Preferencia"); // imprime en el centro "Venta mostrador"
@@ -1041,13 +1057,13 @@ namespace WindowsFormsApplication1
             LBLDIST.Text = "";
             */
         }
-       
+
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             CAJA OBJCAJA = new CAJA();
-             
+
             OBJCAJA.txtIDcaja.Text = Properties.Settings.Default.id_caja;
             OBJCAJA.id_empleado = v_id_empleado;
             OBJCAJA.id_puntoventa = v_id_puntoventa;
@@ -1443,52 +1459,7 @@ namespace WindowsFormsApplication1
             bool retorno = false;
             if (dgvBIEN_VENTA.Rows.Count > 0)
             {
-                /*
-                           if (cboTIPO_DOC.SelectedIndex == 1) //si es ticket factura?
-                           {
-                             if (Convert.ToDouble(lblTOTAL.Text) < 700) //solo permitir hacer ticket factura <= a 700
-                               {
-                                if (txtID_CLIENTE.Text != string.Empty)
-                                  {
-                                     if(cboTIPO_PAGO.SelectedItem.Text != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
-                                         {
-                                               if (txtTIPO_PAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
-                                               {
-                                                   if (txtPAGA.Text != string.Empty)
-                                                   {
-
-                                                       retorno = true;
-
-                                                   }
-                                                   else
-                                                   {
-                                                       retorno = false;
-                                                   }
-                                               }
-                                                   else
-                                                   {
-                                                       retorno = false;
-                                                   }
-                                         }
-                                         else
-                                         {
-                                           retorno = true;
-                                         }
-
-                                       }
-                                   else //el id cliente esta vacio y es factura 
-                                   {
-                                       retorno = false;
-                                   }
-                               }
-                               else //en este caso la factura es > a 700 entonces no se debe generar la venta
-                               {
-                                   retorno = false;
-                               }
-
-                           }
-                     */
-                if (cboTIPO_DOC.SelectedIndex == 0)//si es boleta entonces
+                if (cboTIPO_DOC.SelectedIndex == 1)//si es boleta entonces
                 {
                     if (Convert.ToDouble(lblTOTAL.Text) >= 700)  //tiene q escoger un cliente si la boleta es >= que 700
                     {
@@ -1522,18 +1493,58 @@ namespace WindowsFormsApplication1
                             retorno = false;
                         }
                     }
-                    else // es boleta y < de 700 entonces no interesa los datos del cliente
+                    else if (Convert.ToDouble(lblTOTAL.Text) <= 700)
                     {
-                        if (txtPAGA.Text != string.Empty)
+                        if (txtCLIENTE_ID.Text != string.Empty || txtCLIENTE_ID.Text == string.Empty) //
                         {
-
-                            if (Convert.ToDouble(txtPAGA.Text.ToString()) >= Convert.ToDouble(lblTOTAL.Text.ToString()))
+                            if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
+                            {
+                                if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
+                                {
+                                    if (txtPAGA.Text != string.Empty)
+                                    {
+                                        retorno = true;
+                                    }
+                                    else
+                                    {
+                                        retorno = false;
+                                    }
+                                }
+                                else
+                                {
+                                    retorno = false;
+                                }
+                            }
+                            else
+                            {
+                                retorno = true;
+                            }
+                        }
+                        else 
+                        {
+                            retorno = true;
+                        }
+                    }
+                    
+                }
+                else if (cboTIPO_DOC.SelectedIndex == 2)//si es FACTURA entonces
+                    {
+                        if (Convert.ToDouble(lblTOTAL.Text) >= 700)  //tiene q escoger un cliente si la boleta es >= que 700
+                        {
+                            if (txtCLIENTE_ID.Text != string.Empty) //
                             {
                                 if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
                                 {
                                     if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
                                     {
-                                        retorno = true;
+                                        if (txtPAGA.Text != string.Empty)
+                                        {
+                                            retorno = true;
+                                        }
+                                        else
+                                        {
+                                            retorno = false;
+                                        }
                                     }
                                     else
                                     {
@@ -1545,23 +1556,51 @@ namespace WindowsFormsApplication1
                                     retorno = true;
                                 }
                             }
+                            else //el id_cliente est vacio
+                            {
+                                retorno = false;
+                            }
+                         }
+                        else if (cboTIPO_DOC.SelectedIndex == 0)// es boleta y < de 700 entonces no interesa los datos del cliente
+                        {
+                            if (txtPAGA.Text != string.Empty)
+                            {
+
+                                if (Convert.ToDouble(txtPAGA.Text.ToString()) >= Convert.ToDouble(lblTOTAL.Text.ToString()))
+                                {
+                                    if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
+                                    {
+                                        if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
+                                        {
+                                            retorno = true;
+                                        }
+                                        else
+                                        {
+                                            retorno = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        retorno = true;
+                                    }
+                                }
+                                else
+                                {
+                                    retorno = false;
+                                }
+                            }
                             else
                             {
                                 retorno = false;
                             }
                         }
-                        else
-                        {
-                            retorno = false;
-                        }
+
                     }
 
                 }
-
+                return retorno;
             }
-            return retorno;
         }
-
-
-    }
+    
+    
 }
