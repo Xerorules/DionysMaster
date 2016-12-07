@@ -44,14 +44,17 @@
             this.btnCERRARCAJA = new System.Windows.Forms.Button();
             this.btnSalirCaja = new System.Windows.Forms.Button();
             this.lblTituloCaja = new System.Windows.Forms.Label();
-            this.btnVentaRapida = new System.Windows.Forms.Button();
             this.lblMENSAJES = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnCONTRAER = new System.Windows.Forms.Button();
+            this.btnEXPANDIR = new System.Windows.Forms.Button();
+            this.btnVentaRapida = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnMOVIMIENTOS = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -182,14 +185,14 @@
             // 
             // btnAbrirCaja
             // 
-            this.btnAbrirCaja.BackColor = System.Drawing.Color.Brown;
+            this.btnAbrirCaja.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAbrirCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirCaja.Font = new System.Drawing.Font("Gabriola", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirCaja.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirCaja.ForeColor = System.Drawing.Color.White;
-            this.btnAbrirCaja.Location = new System.Drawing.Point(167, 414);
+            this.btnAbrirCaja.Location = new System.Drawing.Point(154, 414);
             this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAbrirCaja.Name = "btnAbrirCaja";
-            this.btnAbrirCaja.Size = new System.Drawing.Size(177, 76);
+            this.btnAbrirCaja.Size = new System.Drawing.Size(224, 76);
             this.btnAbrirCaja.TabIndex = 14;
             this.btnAbrirCaja.Text = "ABRIR CAJA";
             this.btnAbrirCaja.UseVisualStyleBackColor = false;
@@ -197,14 +200,14 @@
             // 
             // btnCERRARCAJA
             // 
-            this.btnCERRARCAJA.BackColor = System.Drawing.Color.Brown;
+            this.btnCERRARCAJA.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCERRARCAJA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCERRARCAJA.Font = new System.Drawing.Font("Gabriola", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCERRARCAJA.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCERRARCAJA.ForeColor = System.Drawing.Color.White;
-            this.btnCERRARCAJA.Location = new System.Drawing.Point(465, 415);
+            this.btnCERRARCAJA.Location = new System.Drawing.Point(448, 415);
             this.btnCERRARCAJA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCERRARCAJA.Name = "btnCERRARCAJA";
-            this.btnCERRARCAJA.Size = new System.Drawing.Size(171, 75);
+            this.btnCERRARCAJA.Size = new System.Drawing.Size(244, 75);
             this.btnCERRARCAJA.TabIndex = 15;
             this.btnCERRARCAJA.Text = "CERRAR CAJA";
             this.btnCERRARCAJA.UseVisualStyleBackColor = false;
@@ -212,11 +215,11 @@
             // 
             // btnSalirCaja
             // 
-            this.btnSalirCaja.BackColor = System.Drawing.Color.Brown;
+            this.btnSalirCaja.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSalirCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirCaja.Font = new System.Drawing.Font("Gabriola", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirCaja.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirCaja.ForeColor = System.Drawing.Color.White;
-            this.btnSalirCaja.Location = new System.Drawing.Point(746, 415);
+            this.btnSalirCaja.Location = new System.Drawing.Point(761, 414);
             this.btnSalirCaja.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalirCaja.Name = "btnSalirCaja";
             this.btnSalirCaja.Size = new System.Drawing.Size(184, 74);
@@ -229,35 +232,15 @@
             // 
             this.lblTituloCaja.AutoSize = true;
             this.lblTituloCaja.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloCaja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTituloCaja.Font = new System.Drawing.Font("Gabriola", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCaja.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloCaja.ForeColor = System.Drawing.Color.White;
-            this.lblTituloCaja.Location = new System.Drawing.Point(406, 38);
+            this.lblTituloCaja.Location = new System.Drawing.Point(414, 11);
             this.lblTituloCaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloCaja.Name = "lblTituloCaja";
-            this.lblTituloCaja.Size = new System.Drawing.Size(244, 56);
+            this.lblTituloCaja.Size = new System.Drawing.Size(304, 40);
             this.lblTituloCaja.TabIndex = 17;
             this.lblTituloCaja.Text = "ABRIR-CERRAR CAJA";
             this.lblTituloCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnVentaRapida
-            // 
-            this.btnVentaRapida.BackColor = System.Drawing.Color.Transparent;
-            this.btnVentaRapida.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.p_c_ER_3801;
-            this.btnVentaRapida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVentaRapida.FlatAppearance.BorderSize = 0;
-            this.btnVentaRapida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVentaRapida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVentaRapida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVentaRapida.Font = new System.Drawing.Font("Gabriola", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentaRapida.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVentaRapida.Location = new System.Drawing.Point(1150, 55);
-            this.btnVentaRapida.Name = "btnVentaRapida";
-            this.btnVentaRapida.Size = new System.Drawing.Size(182, 188);
-            this.btnVentaRapida.TabIndex = 18;
-            this.btnVentaRapida.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVentaRapida.UseVisualStyleBackColor = true;
-            this.btnVentaRapida.Click += new System.EventHandler(this.btnVentaRapida_Click);
             // 
             // lblMENSAJES
             // 
@@ -269,85 +252,144 @@
             this.lblMENSAJES.Size = new System.Drawing.Size(0, 18);
             this.lblMENSAJES.TabIndex = 19;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(1047, -1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(32, 25);
+            this.button4.TabIndex = 62;
+            this.button4.Text = "-";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnCONTRAER
+            // 
+            this.btnCONTRAER.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCONTRAER.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.flecha_ampliar;
+            this.btnCONTRAER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCONTRAER.FlatAppearance.BorderSize = 0;
+            this.btnCONTRAER.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCONTRAER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCONTRAER.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCONTRAER.Location = new System.Drawing.Point(1, 710);
+            this.btnCONTRAER.Name = "btnCONTRAER";
+            this.btnCONTRAER.Size = new System.Drawing.Size(1078, 62);
+            this.btnCONTRAER.TabIndex = 68;
+            this.btnCONTRAER.Text = "    C O N T R A E R                                                          ";
+            this.btnCONTRAER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCONTRAER.UseVisualStyleBackColor = false;
+            this.btnCONTRAER.Click += new System.EventHandler(this.btnCONTRAER_Click);
+            // 
+            // btnEXPANDIR
+            // 
+            this.btnEXPANDIR.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEXPANDIR.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.expandir_boton;
+            this.btnEXPANDIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEXPANDIR.FlatAppearance.BorderSize = 0;
+            this.btnEXPANDIR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEXPANDIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEXPANDIR.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEXPANDIR.Location = new System.Drawing.Point(1, 532);
+            this.btnEXPANDIR.Name = "btnEXPANDIR";
+            this.btnEXPANDIR.Size = new System.Drawing.Size(1078, 62);
+            this.btnEXPANDIR.TabIndex = 67;
+            this.btnEXPANDIR.Text = "  E X P A N D I R                                                            ";
+            this.btnEXPANDIR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEXPANDIR.UseVisualStyleBackColor = false;
+            this.btnEXPANDIR.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btnVentaRapida
+            // 
+            this.btnVentaRapida.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnVentaRapida.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clasificacion;
+            this.btnVentaRapida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVentaRapida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVentaRapida.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentaRapida.ForeColor = System.Drawing.Color.White;
+            this.btnVentaRapida.Location = new System.Drawing.Point(188, 600);
+            this.btnVentaRapida.Name = "btnVentaRapida";
+            this.btnVentaRapida.Size = new System.Drawing.Size(249, 104);
+            this.btnVentaRapida.TabIndex = 66;
+            this.btnVentaRapida.Text = "VENTA RAPIDA";
+            this.btnVentaRapida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVentaRapida.UseVisualStyleBackColor = false;
+            this.btnVentaRapida.Click += new System.EventHandler(this.btnVentaRapida_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.impresora;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(677, 600);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 104);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "REIMPRESIONES";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btnMOVIMIENTOS
             // 
-            this.btnMOVIMIENTOS.BackColor = System.Drawing.Color.Transparent;
-            this.btnMOVIMIENTOS.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.img_begin1;
-            this.btnMOVIMIENTOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMOVIMIENTOS.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnMOVIMIENTOS.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.movimiento_de_la_mano;
+            this.btnMOVIMIENTOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMOVIMIENTOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMOVIMIENTOS.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMOVIMIENTOS.Location = new System.Drawing.Point(1150, 341);
+            this.btnMOVIMIENTOS.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMOVIMIENTOS.ForeColor = System.Drawing.Color.White;
+            this.btnMOVIMIENTOS.Location = new System.Drawing.Point(430, 600);
             this.btnMOVIMIENTOS.Name = "btnMOVIMIENTOS";
-            this.btnMOVIMIENTOS.Size = new System.Drawing.Size(182, 173);
-            this.btnMOVIMIENTOS.TabIndex = 20;
+            this.btnMOVIMIENTOS.Size = new System.Drawing.Size(249, 104);
+            this.btnMOVIMIENTOS.TabIndex = 64;
+            this.btnMOVIMIENTOS.Text = "MOVIMIENTOS";
+            this.btnMOVIMIENTOS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMOVIMIENTOS.UseVisualStyleBackColor = false;
-            this.btnMOVIMIENTOS.Click += new System.EventHandler(this.btnMOVIMIENTOS_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1180, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 37);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "VENTA RAPIDA";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1187, 515);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 37);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "MOVIMIENTOS";
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Brown;
-            this.button2.Location = new System.Drawing.Point(1047, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 185);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "EXP AND I R";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMOVIMIENTOS.Click += new System.EventHandler(this.btnMOVIMIENTOS_Click_1);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.LOGO_GRUPO_DIONYS__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.lblTituloCaja);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-6, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1093, 60);
+            this.panel1.TabIndex = 69;
+            // 
             // CAJA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1079, 613);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnMOVIMIENTOS);
-            this.Controls.Add(this.lblMENSAJES);
+            this.ClientSize = new System.Drawing.Size(1077, 596);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCONTRAER);
+            this.Controls.Add(this.btnEXPANDIR);
             this.Controls.Add(this.btnVentaRapida);
-            this.Controls.Add(this.lblTituloCaja);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMOVIMIENTOS);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.lblMENSAJES);
             this.Controls.Add(this.btnSalirCaja);
             this.Controls.Add(this.btnCERRARCAJA);
             this.Controls.Add(this.btnAbrirCaja);
@@ -372,6 +414,8 @@
             this.Text = "CAJA";
             this.Load += new System.EventHandler(this.CAJA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,12 +439,14 @@
         public System.Windows.Forms.TextBox txtIDcaja;
         public System.Windows.Forms.TextBox txtSaldoInicial;
         public System.Windows.Forms.TextBox txtSaldoFinal;
-        private System.Windows.Forms.Button btnVentaRapida;
         private System.Windows.Forms.Label lblMENSAJES;
-        private System.Windows.Forms.Button btnMOVIMIENTOS;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVentaRapida;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMOVIMIENTOS;
+        private System.Windows.Forms.Button btnEXPANDIR;
+        private System.Windows.Forms.Button btnCONTRAER;
+        private System.Windows.Forms.Panel panel1;
     }
 }

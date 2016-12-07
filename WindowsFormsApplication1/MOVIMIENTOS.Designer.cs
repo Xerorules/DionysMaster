@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtID_MOVIMIENTO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -101,6 +101,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -325,7 +326,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1365, 278);
+            this.groupBox1.Size = new System.Drawing.Size(1329, 278);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.UseCompatibleTextRendering = true;
@@ -344,7 +345,7 @@
             this.panel3.Location = new System.Drawing.Point(652, 7);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 271);
+            this.panel3.Size = new System.Drawing.Size(10, 271);
             this.panel3.TabIndex = 40;
             // 
             // rdbDOLARES
@@ -362,7 +363,7 @@
             // 
             this.groupBox5.Controls.Add(this.rdbTICKET);
             this.groupBox5.Controls.Add(this.rdbPDF);
-            this.groupBox5.Location = new System.Drawing.Point(932, 209);
+            this.groupBox5.Location = new System.Drawing.Point(909, 212);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(196, 46);
             this.groupBox5.TabIndex = 38;
@@ -394,7 +395,7 @@
             // 
             this.btnIMPRIMIR_REPORTCAJA.BackColor = System.Drawing.Color.DarkCyan;
             this.btnIMPRIMIR_REPORTCAJA.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnIMPRIMIR_REPORTCAJA.Location = new System.Drawing.Point(1177, 235);
+            this.btnIMPRIMIR_REPORTCAJA.Location = new System.Drawing.Point(1134, 235);
             this.btnIMPRIMIR_REPORTCAJA.Name = "btnIMPRIMIR_REPORTCAJA";
             this.btnIMPRIMIR_REPORTCAJA.Size = new System.Drawing.Size(180, 37);
             this.btnIMPRIMIR_REPORTCAJA.TabIndex = 35;
@@ -406,7 +407,7 @@
             // 
             this.btnIMPRIMIR.BackColor = System.Drawing.Color.DarkCyan;
             this.btnIMPRIMIR.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnIMPRIMIR.Location = new System.Drawing.Point(1177, 197);
+            this.btnIMPRIMIR.Location = new System.Drawing.Point(1134, 197);
             this.btnIMPRIMIR.Name = "btnIMPRIMIR";
             this.btnIMPRIMIR.Size = new System.Drawing.Size(180, 37);
             this.btnIMPRIMIR.TabIndex = 34;
@@ -418,7 +419,7 @@
             // 
             this.btnCANCELAR.BackColor = System.Drawing.Color.DarkCyan;
             this.btnCANCELAR.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCANCELAR.Location = new System.Drawing.Point(1177, 94);
+            this.btnCANCELAR.Location = new System.Drawing.Point(1134, 94);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(180, 37);
             this.btnCANCELAR.TabIndex = 32;
@@ -430,7 +431,7 @@
             // 
             this.btnANULAR.BackColor = System.Drawing.Color.DarkCyan;
             this.btnANULAR.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnANULAR.Location = new System.Drawing.Point(1177, 145);
+            this.btnANULAR.Location = new System.Drawing.Point(1134, 145);
             this.btnANULAR.Name = "btnANULAR";
             this.btnANULAR.Size = new System.Drawing.Size(180, 37);
             this.btnANULAR.TabIndex = 33;
@@ -442,7 +443,7 @@
             // 
             this.btnGRABAR.BackColor = System.Drawing.Color.DarkCyan;
             this.btnGRABAR.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnGRABAR.Location = new System.Drawing.Point(1177, 54);
+            this.btnGRABAR.Location = new System.Drawing.Point(1134, 54);
             this.btnGRABAR.Name = "btnGRABAR";
             this.btnGRABAR.Size = new System.Drawing.Size(180, 37);
             this.btnGRABAR.TabIndex = 31;
@@ -454,7 +455,7 @@
             // 
             this.btnNUEVO.BackColor = System.Drawing.Color.DarkCyan;
             this.btnNUEVO.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNUEVO.Location = new System.Drawing.Point(1177, 15);
+            this.btnNUEVO.Location = new System.Drawing.Point(1134, 15);
             this.btnNUEVO.Name = "btnNUEVO";
             this.btnNUEVO.Size = new System.Drawing.Size(180, 37);
             this.btnNUEVO.TabIndex = 30;
@@ -558,7 +559,7 @@
             this.groupBox3.Controls.Add(this.txtPERSONA);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(0, 129);
+            this.groupBox3.Location = new System.Drawing.Point(-43, 129);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1406, 10);
             this.groupBox3.TabIndex = 26;
@@ -620,7 +621,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1399, 837);
+            this.panel1.Size = new System.Drawing.Size(1354, 837);
             this.panel1.TabIndex = 18;
             // 
             // dgvMOV_CAJAKARDEX
@@ -629,19 +630,19 @@
             this.dgvMOV_CAJAKARDEX.AllowUserToDeleteRows = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeColumns = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
-            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew;
+            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvMOV_CAJAKARDEX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvMOV_CAJAKARDEX.BackgroundColor = System.Drawing.Color.DarkCyan;
             this.dgvMOV_CAJAKARDEX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMOV_CAJAKARDEX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMOV_CAJAKARDEX.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMOV_CAJAKARDEX.GridColor = System.Drawing.Color.DarkOrange;
@@ -649,20 +650,20 @@
             this.dgvMOV_CAJAKARDEX.MultiSelect = false;
             this.dgvMOV_CAJAKARDEX.Name = "dgvMOV_CAJAKARDEX";
             this.dgvMOV_CAJAKARDEX.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMOV_CAJAKARDEX.RowHeadersVisible = false;
             this.dgvMOV_CAJAKARDEX.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMOV_CAJAKARDEX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMOV_CAJAKARDEX.Size = new System.Drawing.Size(1354, 294);
+            this.dgvMOV_CAJAKARDEX.Size = new System.Drawing.Size(1311, 294);
             this.dgvMOV_CAJAKARDEX.TabIndex = 19;
             this.dgvMOV_CAJAKARDEX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMOV_CAJAKARDEX_CellClick);
             this.dgvMOV_CAJAKARDEX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMOV_CAJAKARDEX_CellContentClick);
@@ -684,7 +685,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 345);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1365, 173);
+            this.groupBox2.Size = new System.Drawing.Size(1329, 173);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.UseCompatibleTextRendering = true;
@@ -694,7 +695,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSalir.Location = new System.Drawing.Point(1177, 23);
+            this.btnSalir.Location = new System.Drawing.Point(1134, 25);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(180, 68);
             this.btnSalir.TabIndex = 38;
@@ -969,12 +970,27 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Usuario: ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkCyan;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1330, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 40);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "-";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MOVIMIENTOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AllowDrop = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1421, 924);
+            this.ClientSize = new System.Drawing.Size(1374, 924);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1075,5 +1091,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtID_DOC;
+        public System.Windows.Forms.Button button1;
     }
 }

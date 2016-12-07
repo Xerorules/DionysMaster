@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
-    public partial class BUSCAR_CLIENTE : Form
+    public partial class REIMPRESIONES : Form
     {
         public string bc_id_caja;
         public string bc_id_puntoventa;
@@ -39,14 +39,14 @@ namespace WindowsFormsApplication1
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
         public string bc_id_cliente;
         string vFILTRO = "";
-        public BUSCAR_CLIENTE()
+        public REIMPRESIONES()
         {
 
             InitializeComponent();
         }
 
         private void BUSCAR_CLIENTE_Load(object sender, EventArgs e)
-        {
+        {/*
             llenar_tipo_cliente();
             P_LISTAR_DEPARTAMENTO();//AQUI CARGAMOS LA LISTA DE DEPARTAMENTOS
 
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
             cboMC_PROVINCIA_SelectedIndexChanged(sender, e);
             //DataTable detalle = (DataTable)OBJINT.vPdt_detBien;
 
-
+            */
 
         }
 
@@ -80,42 +80,42 @@ namespace WindowsFormsApplication1
         #endregion
 
         private void cboMC_DEPARTAMENTO_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {/*
             P_LISTAR_PROVINCIA(cboMC_DEPARTAMENTO.SelectedValue.ToString());
-            cboMC_PROVINCIA_SelectedIndexChanged(sender, e);
+            cboMC_PROVINCIA_SelectedIndexChanged(sender, e);*/
         }
 
         private void cboMC_PROVINCIA_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            P_LISTAR_DISTRITO(cboMC_PROVINCIA.SelectedValue.ToString());
+        {/*
+            P_LISTAR_DISTRITO(cboMC_PROVINCIA.SelectedValue.ToString());*/
         }
 
         void P_LISTAR_DEPARTAMENTO()
-        {
+        {/*
             DataTable dt = N_OBJCLIENTE.LISTAR_DEPARTAMENTO();
             cboMC_DEPARTAMENTO.DataSource = dt;
             cboMC_DEPARTAMENTO.ValueMember = "UBIDEP";
             cboMC_DEPARTAMENTO.DisplayMember = "UBIDEN";
 
-            //cboMC_DEPARTAMENTO.DataBind();
+            //cboMC_DEPARTAMENTO.DataBind();*/
         }
         void P_LISTAR_PROVINCIA(string depart)
-        {
+        {/*
             DataTable dt = N_OBJCLIENTE.LISTAR_PROVINCIA(depart);
             cboMC_PROVINCIA.DataSource = dt;
             cboMC_PROVINCIA.ValueMember = "UBIPRV";
             cboMC_PROVINCIA.DisplayMember = "UBIPRN";
 
-            //cboMC_PROVINCIA.DataBind();
+            //cboMC_PROVINCIA.DataBind();*/
         }
         void P_LISTAR_DISTRITO(string prov)
-        {
+        {/*
             DataTable dt = N_OBJCLIENTE.LISTAR_DISTRITO(prov);
             cboMC_DISTRITO.DataSource = dt;
             cboMC_DISTRITO.ValueMember = "UBIDST";
             cboMC_DISTRITO.DisplayMember = "UBIDSN";
 
-            //cboMC_DISTRITO.DataBind();
+            //cboMC_DISTRITO.DataBind();*/
         }
 
         private void cboMC_DISTRITO_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,26 +127,44 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
-                textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtNOMCLIENTE.AutoCompleteMode = AutoCompleteMode.Suggest;
+                txtNOMCLIENTE.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtRUCDNI.AutoCompleteMode = AutoCompleteMode.Suggest;
+                txtRUCDNI.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
+                AutoCompleteStringCollection ruc = new AutoCompleteStringCollection();
 
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT DESCRIPCION FROM CLIENTE", con);
+                /* DataTable dt = new DataTable();
+                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                 da.Fill(dt);*/
                 SqlDataReader dr = null;
+
                 dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
                     col.Add(dr["DESCRIPCION"].ToString());
-
                 }
                 dr.Close();
-
-                textBox1.AutoCompleteCustomSource = col;
-
+                txtNOMCLIENTE.AutoCompleteCustomSource = col;
                 con.Close();
+                con.Open();
+                if (txtNOMCLIENTE.Text.Length >= 6)
+                {
+                    SqlCommand cmv = new SqlCommand("SELECT RUC_DNI FROM CLIENTE where DESCRIPCION = '" + txtNOMCLIENTE.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmv);
+                    da.Fill(dt);
+                    
+                    txtRUCDNI.Text = dt.Rows[0][0].ToString();
+                    
+                    con.Close();
+                }
+                else { con.Close(); }
             }
+
             catch
             {
             }
@@ -155,23 +173,42 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                txtFDNI.AutoCompleteMode = AutoCompleteMode.Suggest;
-                txtFDNI.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+
+                txtRUCDNI.AutoCompleteMode = AutoCompleteMode.Suggest;
+                txtRUCDNI.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 AutoCompleteStringCollection col = new AutoCompleteStringCollection();
 
-                con.Open();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
                 SqlCommand cmd = new SqlCommand("SELECT RUC_DNI FROM CLIENTE", con);
+
                 SqlDataReader dr = null;
+
                 dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
                     col.Add(dr["RUC_DNI"].ToString());
                 }
                 dr.Close();
-
-                txtFDNI.AutoCompleteCustomSource = col;
+                txtRUCDNI.AutoCompleteCustomSource = col;
                 con.Close();
+                con.Open();
+                if (txtRUCDNI.Text.Length >= 4)
+                {
+                    SqlCommand cmv = new SqlCommand("SELECT DESCRIPCION FROM CLIENTE where RUC_DNI = '" + txtRUCDNI.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmv);
+                    da.Fill(dt);
+                    txtNOMCLIENTE.Text = dt.Rows[0][0].ToString();
+                    con.Close();
+                }
+                else { con.Close(); }
             }
+
             catch
             {
             }
@@ -179,64 +216,64 @@ namespace WindowsFormsApplication1
 
        
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        {/*
             autocompletar_DESCRIPCION();
             vFILTRO = " ESTADO = 1";
-            CARGAR_DATOS(CONCATENAR_CONDICION());
+            CARGAR_DATOS(CONCATENAR_CONDICION());*/
 
         }
 
         private void txtFDNI_TextChanged(object sender, EventArgs e)
-        {
+        {/*
             autocompletar_dni_ruc();
             vFILTRO = " ESTADO = 1";
-            CARGAR_DATOS(CONCATENAR_CONDICION());
+            CARGAR_DATOS(CONCATENAR_CONDICION());*/
         }
 
 
         public void CARGAR_DATOS(string pCONDICION)
-        {
+        {/*
             DataTable dt = new DataTable();
             dt= N_OBJCLIENTE.CONSULTA_LISTA_CLIENTES(pCONDICION);
             dgvClientes.DataSource = dt;
-            
+            */
         }
 
-        public string CONCATENAR_CONDICION()
-        {
-            if (textBox1.Text != string.Empty)
-            {
-                vFILTRO = " DESCRIPCION LIKE '%" + textBox1.Text + "%'";
-            }
+        /* public string CONCATENAR_CONDICION()
+         {
+             if (textBox1.Text != string.Empty)
+             {
+                 vFILTRO = " DESCRIPCION LIKE '%" + textBox1.Text + "%'";
+             }
 
-            if (txtFDNI.Text != string.Empty)
-            {
-                vFILTRO += " AND RUC_DNI LIKE '%" + txtFDNI.Text + "%'";
-            }
-            if (cboTipoCliente.SelectedIndex != 0)
-            {
-                vFILTRO += " AND TIPO_CLIENTE = '" + cboTipoCliente.SelectedValue + "'";
-            }
-            if (cboMC_DEPARTAMENTO.SelectedIndex != 0)
-            {
-                vFILTRO += " AND UBIDEN = '%" + cboMC_DEPARTAMENTO.SelectedItem + "%'";
-            }
-            if (cboMC_PROVINCIA.SelectedIndex != 0)
-            {
-                vFILTRO += " AND UBIPRN = '%" + cboMC_PROVINCIA.SelectedItem + "%'";
-            }
-            if (cboMC_DISTRITO.SelectedIndex != 0)
-            {
-                vFILTRO += " AND UBIDSN = '%" + cboMC_DISTRITO.SelectedItem + "%'";
-            }
+             if (txtFDNI.Text != string.Empty)
+             {
+                 vFILTRO += " AND RUC_DNI LIKE '%" + txtFDNI.Text + "%'";
+             }
+             if (cboTipoCliente.SelectedIndex != 0)
+             {
+                 vFILTRO += " AND TIPO_CLIENTE = '" + cboTipoCliente.SelectedValue + "'";
+             }
+             if (cboMC_DEPARTAMENTO.SelectedIndex != 0)
+             {
+                 vFILTRO += " AND UBIDEN = '%" + cboMC_DEPARTAMENTO.SelectedItem + "%'";
+             }
+             if (cboMC_PROVINCIA.SelectedIndex != 0)
+             {
+                 vFILTRO += " AND UBIPRN = '%" + cboMC_PROVINCIA.SelectedItem + "%'";
+             }
+             if (cboMC_DISTRITO.SelectedIndex != 0)
+             {
+                 vFILTRO += " AND UBIDSN = '%" + cboMC_DISTRITO.SelectedItem + "%'";
+             }
 
-            
 
-            return vFILTRO;
-        }
+
+             return vFILTRO;
+         }*/
 
         public void llenar_tipo_cliente()
-            {
+        {/*
             List<ListaTipoProd> List = new List<ListaTipoProd>();
 
             List.Add(new ListaTipoProd { texto = "P. NATURAL", value = "PN" });
@@ -245,18 +282,18 @@ namespace WindowsFormsApplication1
             cboTipoCliente.DataSource = List;
             cboTipoCliente.DisplayMember = "texto";
             cboTipoCliente.ValueMember = "value";
-            cboTipoCliente.SelectedIndex = 0;
+            cboTipoCliente.SelectedIndex = 0;*/
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {/*
             vFILTRO = " ESTADO = 1";
             CARGAR_DATOS(CONCATENAR_CONDICION());
-            
+            */
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {/*
             if (this.dgvClientes.Columns[e.ColumnIndex].Name == "colBotones")
             {
                // T_DETALLE detalle = new T_DETALLE();
@@ -265,14 +302,14 @@ namespace WindowsFormsApplication1
                 string id_DNIRUC_dgv = dgvClientes.Rows[e.RowIndex].Cells["RUC_DNI"].Value.ToString();
                 string id_DESCRIPCION_dgv = dgvClientes.Rows[e.RowIndex].Cells["DESCRIPCION"].Value.ToString();
               
-                /*-------------REVISAR CODIGO---------------*/
+                
                 OBJINT.txtCLIENTE_VENTA.Text = dgvClientes.Rows[e.RowIndex].Cells["DESCRIPCION"].Value.ToString();
 
                 OBJINT.txtCLIENTE_RUC.Text = dgvClientes.Rows[e.RowIndex].Cells["RUC_DNI"].Value.ToString();
 
                 OBJINT.txtCLIENTE_ID.Text = dgvClientes.Rows[e.RowIndex].Cells["ID_CLIENTE"].Value.ToString();
                 
-               /*-------------REVISAR CODIGO---------------*/
+               
                 OBJINT.v_id_caja = Program.id_caja;
                 OBJINT.lblCajaIDVentas.Text = Program.id_caja;
                 OBJINT.v_id_puntoventa = bc_id_puntoventa;
@@ -285,10 +322,36 @@ namespace WindowsFormsApplication1
                 OBJINT.v_fchacierre = bc_fchacierre;
                 OBJINT.v_saldo_ini = bc_saldo_ini;
                 OBJINT.v_saldo_fin = bc_saldo_fin;
-                //OBJINT.Visible = true;/*REVISAR HACER QUE MANDE VALORES SIN LODEAR*/
+                //OBJINT.Visible = true;/*REVISAR HACER QUE MANDE VALORES SIN LODEAR
                 this.Close();
-            }
+        }*/
+        
+        }
 
+        private void button1_DragOver(object sender, DragEventArgs e)
+        {
+            button1.BackColor= Color.DeepSkyBlue;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CAJA OBJCAJA = new CAJA();
+
+            OBJCAJA.txtIDcaja.Text = Properties.Settings.Default.id_caja;
+            OBJCAJA.Visible = true;
+            this.Close();
+
+        }
+
+        private void txtNOMCLIENTE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            autocompletar_DESCRIPCION();
+        }
+
+        private void txtRUCDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            autocompletar_dni_ruc();
         }
     }
 }

@@ -36,8 +36,10 @@ namespace WindowsFormsApplication1
 
         private void MOVIMIENTOS_Load(object sender, EventArgs e)
         {
-                //CON ESTO PUEDO VERIFICO SI TENGO UNA CAJA ABIERTA  Y SINO ES ASI, ABRIR UNA CAJA NUEVA
-               if (Properties.Settings.Default.id_caja == string.Empty)
+                
+
+            //CON ESTO PUEDO VERIFICO SI TENGO UNA CAJA ABIERTA  Y SINO ES ASI, ABRIR UNA CAJA NUEVA
+            if (Properties.Settings.Default.id_caja == string.Empty)
                 {
                     CAJA objcaja = new CAJA();
                     objcaja.ShowDialog();
@@ -591,17 +593,16 @@ namespace WindowsFormsApplication1
             if (dgvMOV_CAJAKARDEX.Rows.Count != 0 && rdbACTIVOS.Checked == false && rdbTODOS.Checked == false && rdbANULADOS.Checked == false ) //AQUI VALIDO QUE EXISTAN DATOS EN MI GRIDVIEW PARA PODER IMPRIIMIR MIS DATOS
             {
 
-                if (rdbTICKET.Checked == true) //AQUI GENERO EL ARCHIVO PDF PARA SU IMPRESION
+                if (dgvMOV_CAJAKARDEX.CurrentRow.Cells[3].Value.ToString() != "IPV") //AQUI GENERO EL ARCHIVO PDF PARA SU IMPRESION
                 {
-                    string IDMOV = txtID_MOVIMIENTO.Text;
-                    string IDEMP = Properties.Settings.Default.id_empresa;
-                    String url = String.Format("REPORTES/FRM_REPORTE_RECIBO_EGRESO_INGRESO.aspx?IDMOV={0}&IDEMP={1}", IDMOV, IDEMP);
-                
+
+                    P_IMPRIMIR_GRABAR();
+
                 }
                 else //SINO GENERO LA IMPRESION DE LOS TICKET BOLETA
                 {
                   
-                    P_IMPRIMIR_GRABAR();
+                    
                    
                 }
             }
@@ -891,7 +892,7 @@ namespace WindowsFormsApplication1
             Ticket1.LineasGuion(); // imprime una linea de guiones
 
             Ticket1.TextoCentro(DateTime.Now.ToString());
-            Ticket1.TextoCentro("RECIBO: " + cboTIPO_MOV.Text);
+            Ticket1.TextoCentro("RECIBO: " + dgvMOV_CAJAKARDEX.CurrentRow.Cells[4].Value.ToString());
             Ticket1.TextoCentro("#MOV: " + dgvMOV_CAJAKARDEX.CurrentRow.Cells[0].Value.ToString());
             Ticket1.TextoCentro("IMPORTE: " + dgvMOV_CAJAKARDEX.CurrentRow.Cells[5].Value.ToString());
             Ticket1.LineasGuion(); // imprime una linea de guiones
@@ -1747,12 +1748,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-
-
-
-
-
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

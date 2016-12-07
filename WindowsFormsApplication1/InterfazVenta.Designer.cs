@@ -81,6 +81,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtCLIENTE_ID = new System.Windows.Forms.TextBox();
             this.txtTIPO_PAGO = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LBLDIRECCION = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblTicket = new System.Windows.Forms.Label();
+            this.lblSerie = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -90,15 +97,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LBLDIRECCION = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblTicket = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBIEN_VENTA)).BeginInit();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -313,7 +314,7 @@
             this.dgvBIEN_VENTA.AllowUserToResizeColumns = false;
             this.dgvBIEN_VENTA.AllowUserToResizeRows = false;
             this.dgvBIEN_VENTA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvBIEN_VENTA.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBIEN_VENTA.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.dgvBIEN_VENTA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBIEN_VENTA.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvBIEN_VENTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -396,9 +397,9 @@
             // btnBIEN01
             // 
             this.btnBIEN01.AccessibleName = "";
-            this.btnBIEN01.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN01.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN01.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN01.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN01.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN01.ForeColor = System.Drawing.Color.White;
             this.btnBIEN01.Location = new System.Drawing.Point(63, 273);
             this.btnBIEN01.Name = "btnBIEN01";
@@ -410,9 +411,9 @@
             // btnBIEN02
             // 
             this.btnBIEN02.AccessibleName = "";
-            this.btnBIEN02.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN02.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN02.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN02.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN02.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN02.ForeColor = System.Drawing.Color.White;
             this.btnBIEN02.Location = new System.Drawing.Point(222, 273);
             this.btnBIEN02.Name = "btnBIEN02";
@@ -424,9 +425,9 @@
             // btnBIEN03
             // 
             this.btnBIEN03.AccessibleName = "";
-            this.btnBIEN03.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN03.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN03.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN03.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN03.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN03.ForeColor = System.Drawing.Color.White;
             this.btnBIEN03.Location = new System.Drawing.Point(381, 273);
             this.btnBIEN03.Name = "btnBIEN03";
@@ -438,9 +439,9 @@
             // btnBIEN04
             // 
             this.btnBIEN04.AccessibleName = "";
-            this.btnBIEN04.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN04.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN04.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN04.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN04.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN04.ForeColor = System.Drawing.Color.White;
             this.btnBIEN04.Location = new System.Drawing.Point(538, 273);
             this.btnBIEN04.Name = "btnBIEN04";
@@ -452,9 +453,9 @@
             // btnBIEN05
             // 
             this.btnBIEN05.AccessibleName = "";
-            this.btnBIEN05.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN05.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN05.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN05.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN05.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN05.ForeColor = System.Drawing.Color.White;
             this.btnBIEN05.Location = new System.Drawing.Point(63, 371);
             this.btnBIEN05.Name = "btnBIEN05";
@@ -466,9 +467,9 @@
             // btnBIEN06
             // 
             this.btnBIEN06.AccessibleName = "";
-            this.btnBIEN06.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN06.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN06.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN06.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN06.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN06.ForeColor = System.Drawing.Color.White;
             this.btnBIEN06.Location = new System.Drawing.Point(222, 371);
             this.btnBIEN06.Name = "btnBIEN06";
@@ -480,9 +481,9 @@
             // btnBIEN07
             // 
             this.btnBIEN07.AccessibleName = "";
-            this.btnBIEN07.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN07.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN07.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN07.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN07.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN07.ForeColor = System.Drawing.Color.White;
             this.btnBIEN07.Location = new System.Drawing.Point(381, 371);
             this.btnBIEN07.Name = "btnBIEN07";
@@ -494,9 +495,9 @@
             // btnBIEN08
             // 
             this.btnBIEN08.AccessibleName = "btnBIEN01";
-            this.btnBIEN08.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN08.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN08.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN08.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN08.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN08.ForeColor = System.Drawing.Color.White;
             this.btnBIEN08.Location = new System.Drawing.Point(538, 371);
             this.btnBIEN08.Name = "btnBIEN08";
@@ -508,9 +509,9 @@
             // btnBIEN09
             // 
             this.btnBIEN09.AccessibleName = "";
-            this.btnBIEN09.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN09.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN09.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN09.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN09.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN09.ForeColor = System.Drawing.Color.White;
             this.btnBIEN09.Location = new System.Drawing.Point(63, 472);
             this.btnBIEN09.Name = "btnBIEN09";
@@ -522,9 +523,9 @@
             // btnBIEN10
             // 
             this.btnBIEN10.AccessibleName = "";
-            this.btnBIEN10.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN10.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN10.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN10.ForeColor = System.Drawing.Color.White;
             this.btnBIEN10.Location = new System.Drawing.Point(222, 472);
             this.btnBIEN10.Name = "btnBIEN10";
@@ -536,9 +537,9 @@
             // btnBIEN11
             // 
             this.btnBIEN11.AccessibleName = "";
-            this.btnBIEN11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN11.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN11.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN11.ForeColor = System.Drawing.Color.White;
             this.btnBIEN11.Location = new System.Drawing.Point(381, 472);
             this.btnBIEN11.Name = "btnBIEN11";
@@ -550,8 +551,8 @@
             // btnBIEN12
             // 
             this.btnBIEN12.AccessibleName = "";
-            this.btnBIEN12.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnBIEN12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN12.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnBIEN12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN12.ForeColor = System.Drawing.Color.White;
             this.btnBIEN12.Location = new System.Drawing.Point(538, 472);
             this.btnBIEN12.Name = "btnBIEN12";
@@ -563,9 +564,9 @@
             // btnBIEN13
             // 
             this.btnBIEN13.AccessibleName = "";
-            this.btnBIEN13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN13.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN13.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN13.ForeColor = System.Drawing.Color.White;
             this.btnBIEN13.Location = new System.Drawing.Point(63, 573);
             this.btnBIEN13.Name = "btnBIEN13";
@@ -577,9 +578,9 @@
             // btnBIEN14
             // 
             this.btnBIEN14.AccessibleName = "";
-            this.btnBIEN14.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN14.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN14.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN14.ForeColor = System.Drawing.Color.White;
             this.btnBIEN14.Location = new System.Drawing.Point(222, 573);
             this.btnBIEN14.Name = "btnBIEN14";
@@ -591,9 +592,9 @@
             // btnBIEN15
             // 
             this.btnBIEN15.AccessibleName = "";
-            this.btnBIEN15.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN15.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN15.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN15.ForeColor = System.Drawing.Color.White;
             this.btnBIEN15.Location = new System.Drawing.Point(381, 573);
             this.btnBIEN15.Name = "btnBIEN15";
@@ -605,9 +606,9 @@
             // btnBIEN16
             // 
             this.btnBIEN16.AccessibleName = "";
-            this.btnBIEN16.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN16.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN16.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN16.ForeColor = System.Drawing.Color.White;
             this.btnBIEN16.Location = new System.Drawing.Point(538, 573);
             this.btnBIEN16.Name = "btnBIEN16";
@@ -619,9 +620,9 @@
             // btnBIEN17
             // 
             this.btnBIEN17.AccessibleName = "";
-            this.btnBIEN17.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN17.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN17.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN17.ForeColor = System.Drawing.Color.White;
             this.btnBIEN17.Location = new System.Drawing.Point(63, 674);
             this.btnBIEN17.Name = "btnBIEN17";
@@ -633,9 +634,9 @@
             // btnBIEN18
             // 
             this.btnBIEN18.AccessibleName = "";
-            this.btnBIEN18.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN18.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN18.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN18.ForeColor = System.Drawing.Color.White;
             this.btnBIEN18.Location = new System.Drawing.Point(222, 674);
             this.btnBIEN18.Name = "btnBIEN18";
@@ -647,9 +648,9 @@
             // btnBIEN19
             // 
             this.btnBIEN19.AccessibleName = "";
-            this.btnBIEN19.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN19.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN19.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN19.ForeColor = System.Drawing.Color.White;
             this.btnBIEN19.Location = new System.Drawing.Point(381, 674);
             this.btnBIEN19.Name = "btnBIEN19";
@@ -661,9 +662,9 @@
             // btnBIEN20
             // 
             this.btnBIEN20.AccessibleName = "";
-            this.btnBIEN20.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBIEN20.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN20.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnBIEN20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBIEN20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN20.ForeColor = System.Drawing.Color.White;
             this.btnBIEN20.Location = new System.Drawing.Point(538, 674);
             this.btnBIEN20.Name = "btnBIEN20";
@@ -755,6 +756,86 @@
             this.txtTIPO_PAGO.Name = "txtTIPO_PAGO";
             this.txtTIPO_PAGO.Size = new System.Drawing.Size(269, 24);
             this.txtTIPO_PAGO.TabIndex = 52;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblTOTAL);
+            this.groupBox1.Controls.Add(this.lblIGV);
+            this.groupBox1.Controls.Add(this.lblSUBTOTAL);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(849, 659);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(478, 115);
+            this.groupBox1.TabIndex = 55;
+            this.groupBox1.TabStop = false;
+            // 
+            // LBLDIRECCION
+            // 
+            this.LBLDIRECCION.AutoSize = true;
+            this.LBLDIRECCION.Location = new System.Drawing.Point(745, 54);
+            this.LBLDIRECCION.Name = "LBLDIRECCION";
+            this.LBLDIRECCION.Size = new System.Drawing.Size(41, 13);
+            this.LBLDIRECCION.TabIndex = 56;
+            this.LBLDIRECCION.Text = "label15";
+            this.LBLDIRECCION.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(37, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 20);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "TICKET:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(232, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 20);
+            this.label16.TabIndex = 58;
+            this.label16.Text = "SERIE:";
+            // 
+            // lblTicket
+            // 
+            this.lblTicket.AutoSize = true;
+            this.lblTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTicket.ForeColor = System.Drawing.Color.White;
+            this.lblTicket.Location = new System.Drawing.Point(104, 3);
+            this.lblTicket.Name = "lblTicket";
+            this.lblTicket.Size = new System.Drawing.Size(0, 20);
+            this.lblTicket.TabIndex = 59;
+            // 
+            // lblSerie
+            // 
+            this.lblSerie.AutoSize = true;
+            this.lblSerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerie.ForeColor = System.Drawing.Color.White;
+            this.lblSerie.Location = new System.Drawing.Point(291, 3);
+            this.lblSerie.Name = "lblSerie";
+            this.lblSerie.Size = new System.Drawing.Size(0, 20);
+            this.lblSerie.TabIndex = 60;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button4.Font = new System.Drawing.Font("Arial Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(1578, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(46, 40);
+            this.button4.TabIndex = 61;
+            this.button4.Text = "-";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
@@ -861,78 +942,13 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Usuario: ";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblTOTAL);
-            this.groupBox1.Controls.Add(this.lblIGV);
-            this.groupBox1.Controls.Add(this.lblSUBTOTAL);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(849, 659);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 115);
-            this.groupBox1.TabIndex = 55;
-            this.groupBox1.TabStop = false;
-            // 
-            // LBLDIRECCION
-            // 
-            this.LBLDIRECCION.AutoSize = true;
-            this.LBLDIRECCION.Location = new System.Drawing.Point(745, 54);
-            this.LBLDIRECCION.Name = "LBLDIRECCION";
-            this.LBLDIRECCION.Size = new System.Drawing.Size(41, 13);
-            this.LBLDIRECCION.TabIndex = 56;
-            this.LBLDIRECCION.Text = "label15";
-            this.LBLDIRECCION.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(37, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 20);
-            this.label15.TabIndex = 57;
-            this.label15.Text = "TICKET:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(232, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 20);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "SERIE:";
-            // 
-            // lblTicket
-            // 
-            this.lblTicket.AutoSize = true;
-            this.lblTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTicket.ForeColor = System.Drawing.Color.White;
-            this.lblTicket.Location = new System.Drawing.Point(104, 3);
-            this.lblTicket.Name = "lblTicket";
-            this.lblTicket.Size = new System.Drawing.Size(0, 20);
-            this.lblTicket.TabIndex = 59;
-            // 
-            // lblSerie
-            // 
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.ForeColor = System.Drawing.Color.White;
-            this.lblSerie.Location = new System.Drawing.Point(291, 3);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(0, 20);
-            this.lblSerie.TabIndex = 60;
-            // 
             // InterfazVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1624, 943);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblTicket);
             this.Controls.Add(this.label16);
@@ -991,10 +1007,10 @@
             this.Text = "InterfazVenta";
             this.Load += new System.EventHandler(this.InterfazVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBIEN_VENTA)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1068,5 +1084,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblTicket;
         private System.Windows.Forms.Label lblSerie;
+        public System.Windows.Forms.Button button4;
     }
 }

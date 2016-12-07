@@ -40,10 +40,14 @@
             this.btnINGRESAR = new System.Windows.Forms.Button();
             this.txtCLAVE = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMENSAJE_ERROR = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnREIMPRESIONES = new System.Windows.Forms.Button();
+            this.btnMOVIMIENTOS = new System.Windows.Forms.Button();
+            this.btnCAJA = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnVENTARAPIDA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +101,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
@@ -120,6 +125,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
@@ -131,6 +137,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
@@ -142,6 +149,7 @@
             // 
             // txtDNI_USUARIO
             // 
+            this.txtDNI_USUARIO.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtDNI_USUARIO.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI_USUARIO.Location = new System.Drawing.Point(709, 309);
             this.txtDNI_USUARIO.Name = "txtDNI_USUARIO";
@@ -150,12 +158,12 @@
             // 
             // btnINGRESAR
             // 
-            this.btnINGRESAR.BackColor = System.Drawing.Color.Brown;
-            this.btnINGRESAR.Font = new System.Drawing.Font("Gabriola", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnINGRESAR.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnINGRESAR.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINGRESAR.ForeColor = System.Drawing.Color.Snow;
-            this.btnINGRESAR.Location = new System.Drawing.Point(747, 460);
+            this.btnINGRESAR.Location = new System.Drawing.Point(741, 460);
             this.btnINGRESAR.Name = "btnINGRESAR";
-            this.btnINGRESAR.Size = new System.Drawing.Size(144, 75);
+            this.btnINGRESAR.Size = new System.Drawing.Size(168, 75);
             this.btnINGRESAR.TabIndex = 11;
             this.btnINGRESAR.Text = "INGRESAR";
             this.btnINGRESAR.UseVisualStyleBackColor = false;
@@ -172,27 +180,16 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Brown;
-            this.button1.Font = new System.Drawing.Font("Gabriola", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(969, 460);
+            this.button1.Location = new System.Drawing.Point(962, 460);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 75);
+            this.button1.Size = new System.Drawing.Size(152, 75);
             this.button1.TabIndex = 13;
             this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.LOGO_GRUPO_DIONYS__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 231);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // lblMENSAJE_ERROR
             // 
@@ -226,14 +223,92 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 11;
             // 
+            // btnREIMPRESIONES
+            // 
+            this.btnREIMPRESIONES.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnREIMPRESIONES.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.impresora;
+            this.btnREIMPRESIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnREIMPRESIONES.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnREIMPRESIONES.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnREIMPRESIONES.ForeColor = System.Drawing.Color.White;
+            this.btnREIMPRESIONES.Location = new System.Drawing.Point(863, 653);
+            this.btnREIMPRESIONES.Name = "btnREIMPRESIONES";
+            this.btnREIMPRESIONES.Size = new System.Drawing.Size(234, 104);
+            this.btnREIMPRESIONES.TabIndex = 18;
+            this.btnREIMPRESIONES.Text = "REIMPRESIONES";
+            this.btnREIMPRESIONES.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnREIMPRESIONES.UseVisualStyleBackColor = false;
+            // 
+            // btnMOVIMIENTOS
+            // 
+            this.btnMOVIMIENTOS.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnMOVIMIENTOS.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.movimiento_de_la_mano;
+            this.btnMOVIMIENTOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMOVIMIENTOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMOVIMIENTOS.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMOVIMIENTOS.ForeColor = System.Drawing.Color.White;
+            this.btnMOVIMIENTOS.Location = new System.Drawing.Point(616, 653);
+            this.btnMOVIMIENTOS.Name = "btnMOVIMIENTOS";
+            this.btnMOVIMIENTOS.Size = new System.Drawing.Size(249, 104);
+            this.btnMOVIMIENTOS.TabIndex = 17;
+            this.btnMOVIMIENTOS.Text = "MOVIMIENTOS";
+            this.btnMOVIMIENTOS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMOVIMIENTOS.UseVisualStyleBackColor = false;
+            // 
+            // btnCAJA
+            // 
+            this.btnCAJA.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnCAJA.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.caja_registradora1;
+            this.btnCAJA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCAJA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCAJA.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCAJA.ForeColor = System.Drawing.Color.White;
+            this.btnCAJA.Location = new System.Drawing.Point(125, 653);
+            this.btnCAJA.Name = "btnCAJA";
+            this.btnCAJA.Size = new System.Drawing.Size(251, 104);
+            this.btnCAJA.TabIndex = 15;
+            this.btnCAJA.Text = "CAJA";
+            this.btnCAJA.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCAJA.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.LOGO_GRUPO_DIONYS__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(125, 231);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnVENTARAPIDA
+            // 
+            this.btnVENTARAPIDA.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnVENTARAPIDA.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clasificacion;
+            this.btnVENTARAPIDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVENTARAPIDA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVENTARAPIDA.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVENTARAPIDA.ForeColor = System.Drawing.Color.White;
+            this.btnVENTARAPIDA.Location = new System.Drawing.Point(374, 653);
+            this.btnVENTARAPIDA.Name = "btnVENTARAPIDA";
+            this.btnVENTARAPIDA.Size = new System.Drawing.Size(249, 104);
+            this.btnVENTARAPIDA.TabIndex = 19;
+            this.btnVENTARAPIDA.Text = "VENTA RAPIDA";
+            this.btnVENTARAPIDA.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVENTARAPIDA.UseVisualStyleBackColor = false;
+            // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1204, 610);
+            this.ClientSize = new System.Drawing.Size(1204, 647);
+            this.Controls.Add(this.btnVENTARAPIDA);
+            this.Controls.Add(this.btnREIMPRESIONES);
+            this.Controls.Add(this.btnMOVIMIENTOS);
+            this.Controls.Add(this.btnCAJA);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMENSAJE_ERROR);
@@ -279,6 +354,10 @@
         private System.Windows.Forms.Label lblMENSAJE_ERROR;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnCAJA;
+        private System.Windows.Forms.Button btnMOVIMIENTOS;
+        private System.Windows.Forms.Button btnREIMPRESIONES;
+        private System.Windows.Forms.Button btnVENTARAPIDA;
     }
 }
 

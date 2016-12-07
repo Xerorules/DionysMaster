@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUSCAR_CLIENTE.cs">
+    <Compile Include="REIMPRESIONES.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUSCAR_CLIENTE.Designer.cs">
-      <DependentUpon>BUSCAR_CLIENTE.cs</DependentUpon>
+    <Compile Include="REIMPRESIONES.Designer.cs">
+      <DependentUpon>REIMPRESIONES.cs</DependentUpon>
     </Compile>
     <Compile Include="CAJA.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="BUSCAR_CLIENTE.resx">
-      <DependentUpon>BUSCAR_CLIENTE.cs</DependentUpon>
+    <EmbeddedResource Include="REIMPRESIONES.resx">
+      <DependentUpon>REIMPRESIONES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CAJA.resx">
       <DependentUpon>CAJA.cs</DependentUpon>
@@ -195,6 +195,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-ampliar.png" />
+    <None Include="Resources\expandir-boton.png" />
+    <None Include="Resources\menu-en-boton-de-expansion1.png" />
+    <None Include="Resources\menu-en-boton-de-expansion.png" />
+    <None Include="Resources\menu-en-boton-de-expansion %281%29.png" />
+    <None Include="Resources\flecha-de-expandir1.png" />
+    <None Include="Resources\flecha-de-expandir.png" />
+    <None Include="Resources\agrandar.png" />
+    <Content Include="Resources\caja-registradora.png" />
+    <Content Include="Resources\clasificacion.png" />
+    <Content Include="Resources\impresora.png" />
+    <Content Include="Resources\movimiento-de-la-mano.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

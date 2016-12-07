@@ -148,12 +148,12 @@ namespace WindowsFormsApplication1
             string CONTRASENA = txtCLAVE.Text.ToString();
             string ID_SEDE = VG_SEDE();
             
-        DataTable dt = OBJLOGUEO.VALIDAR_USUARIO(USUARIO, CONTRASENA, ID_SEDE);
+            DataTable dt = OBJLOGUEO.VALIDAR_USUARIO(USUARIO, CONTRASENA, ID_SEDE);
 
 
             if (dt.Rows.Count != 0)
             {
-
+                
                 OBJVARIABLES.id_puntoventa = VG_ID_PUNTOVENTA();
                 OBJVARIABLES.Idcaja = string.Empty;
                 OBJVARIABLES.id_empresa = comboBox1.SelectedValue.ToString();
@@ -165,9 +165,8 @@ namespace WindowsFormsApplication1
                 label7.Text = "BIENVENIDO(A)...";
                 VALIDAR_ASIGNAR_CAJA();
                 VALIDAR_TIPO_CAMBIO();
-
                 CAJA OBJCAJA = new CAJA();
-                
+
                 OBJCAJA.txtIDcaja.Text = OBJVARIABLES.Idcaja.ToString();
                 Properties.Settings.Default.id_caja = OBJVARIABLES.Idcaja.ToString();
                 Properties.Settings.Default.serie = VG_SERIE();
@@ -185,7 +184,7 @@ namespace WindowsFormsApplication1
                 OBJCAJA.nombre_empleado = OBJVARIABLES.nombre_empleado;
                 OBJCAJA.tipo_cambio = OBJVARIABLES.tipo_cambio;
                 OBJCAJA.sede = OBJVARIABLES.sede;
-                
+
                 /*---VARIABLE id_sede GUARDA VALOR AUN DESPUES DE CERRAR LA APLICACION---*/
                 Properties.Settings.Default.id_sede = OBJVARIABLES.sede;
                 Properties.Settings.Default.Save();
@@ -242,10 +241,9 @@ namespace WindowsFormsApplication1
                 Properties.Settings.Default.Save();
                 Properties.Settings.Default.Upgrade();
                 /*-----------------------------------------------------------------------*/
+
                 OBJCAJA.Show();
                 this.Visible = false;
-
-
 
 
             }
@@ -290,6 +288,11 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCAJA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

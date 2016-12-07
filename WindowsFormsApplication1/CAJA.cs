@@ -265,9 +265,9 @@ namespace WindowsFormsApplication1
                     HABILITAR_CONTROLES(2); // CON ESTA OPCION SE PONE EN ESTADO DE CONSULTA DE CAJA
                     if (this.Width >= 1100)
                     {
-                        button2.Location = new Point(1190, 226);
+                        btnEXPANDIR.Location = new Point(1190, 226);
                         this.Width = 1079;
-                        button2.Text = "EXP AND I R";
+                        btnEXPANDIR.Text = "EXP AND I R";
                     }
                     lblMENSAJES.Text = string.Empty;
 
@@ -281,6 +281,78 @@ namespace WindowsFormsApplication1
 
         private void btnVentaRapida_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        public new Point Location { get; set; }
+        private void btnEXPANDIR_Click(object sender, EventArgs e)
+        {
+            if (id_caja != string.Empty) {
+                if (this.Height == 596)
+                {
+                    this.Height = 774;
+                    btnEXPANDIR.Visible = false;
+                    btnCONTRAER.Visible = true;
+                }
+                
+            }
+            else
+            {
+                lblMENSAJES.Text = "¡¡NO TIENES CAJA ABIERTA, PRIMERO APERTURA UNA CAJA!!";
+            }
+        }
+
+
+
+
+
+        private void btnMOVIMIENTOS_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (id_caja != string.Empty)
+            {
+                if (this.Height == 596)
+                {
+                    this.Height = 774;
+                    btnEXPANDIR.Visible = false;
+                    btnCONTRAER.Visible = true;
+                }
+
+            }
+            else
+            {
+                lblMENSAJES.Text = "¡¡NO TIENES CAJA ABIERTA, PRIMERO APERTURA UNA CAJA!!";
+            }
+        }
+
+        private void btnCONTRAER_Click(object sender, EventArgs e)
+        {
+            if (this.Height == 774)
+            {
+                this.Height = 596;
+                btnEXPANDIR.Visible = true;
+            }
+        }
+
+        private void btnVentaRapida_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Width = 1079;
+            btnEXPANDIR.PerformClick();
             if (id_caja != string.Empty) //SI ES DIFERENTE DE VACIO ES PORQUE EL USUARIO  ID_USUARIO Y EL PUNTO DE VENTA ID_PUNTOVENTA TIENE CAJA APERTURADA
             {
                 InterfazVenta objventa = new InterfazVenta();
@@ -294,7 +366,7 @@ namespace WindowsFormsApplication1
                 objventa.v_numeroticket = (Convert.ToInt32(NUMERHO) + 1).ToString();
                 con.Close();
 
-                
+
                 objventa.lblCajaIDVentas.Text = Program.id_caja;
                 objventa.v_id_empleado = id_empleado;
                 objventa.v_id_puntoventa = id_puntoventa;
@@ -302,11 +374,11 @@ namespace WindowsFormsApplication1
                 objventa.v_nombre_empleado = nombre_empleado;
                 objventa.v_tipo_cambio = tipo_cambio;
                 objventa.v_sede = sede;
-                this.Width = 1079;
-                button2.PerformClick();
+
+
                 objventa.Show();
-                
-                // this.Hide();
+
+
             }
             else
             {
@@ -314,38 +386,15 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public new Point Location { get; set; }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMOVIMIENTOS_Click_1(object sender, EventArgs e)
         {
-            if (id_caja != string.Empty) {
-                if (this.Width == 1079)
-                {
-                    this.Width = 1360;
-                    button2.Location = new Point(1330, 226);
-                    button2.Text = "CON TRA E R";
-                }
-                else
-                {
-                    if (this.Width >= 1100)
-                    {
-                        button2.Location = new Point(1190, 226);
-                        this.Width = 1079;
-                        button2.Text = "EXP AND I R";
-                    }
-                }
-            }
-            else
-            {
-                lblMENSAJES.Text = "¡¡NO TIENES CAJA ABIERTA, PRIMERO APERTURA UNA CAJA!!";
-            }
-        }
-
-        private void btnMOVIMIENTOS_Click(object sender, EventArgs e)
-        {
+            this.Hide();
+            //this.Width = 1079;
+            btnEXPANDIR.PerformClick();
             if (id_caja != string.Empty) //SI ES DIFERENTE DE VACIO ES PORQUE EL USUARIO  ID_USUARIO Y EL PUNTO DE VENTA ID_PUNTOVENTA TIENE CAJA APERTURADA
             {
 
-                MOVIMIENTOS objMOV= new MOVIMIENTOS();
+                MOVIMIENTOS objMOV = new MOVIMIENTOS();
                 objMOV.m_id_caja = Program.id_caja;
                 objMOV.m_id_empleado = id_empleado;
                 objMOV.m_id_puntoventa = id_puntoventa;
@@ -354,13 +403,20 @@ namespace WindowsFormsApplication1
                 objMOV.m_tipo_cambio = tipo_cambio;
                 objMOV.m_sede = sede;
                 objMOV.ShowDialog();
-                this.Width = 1079;
-                this.Visible = false;
+
+
             }
             else
             {
                 lblMENSAJES.Text = "¡¡NO TIENES CAJA ABIERTA, PRIMERO APERTURA UNA CAJA!!";
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            REIMPRESIONES BC = new REIMPRESIONES();
+            BC.ShowDialog();
         }
     }
 }

@@ -1071,7 +1071,7 @@ namespace WindowsFormsApplication1
             OBJCAJA.tipo_cambio = v_tipo_cambio;
             OBJCAJA.nombre_empleado = v_nombre_empleado;
             OBJCAJA.id_empresa = v_id_empresa;
-            //OBJCAJA.Visible=true;
+            OBJCAJA.Visible=true;
             this.Close();
         }
 
@@ -1454,6 +1454,11 @@ namespace WindowsFormsApplication1
             autocompletar_RUCDNI();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private bool VALIDAR_DATOS()
         {
             bool retorno = false;
@@ -1520,68 +1525,30 @@ namespace WindowsFormsApplication1
                                 retorno = true;
                             }
                         }
-                        else 
+                        else
                         {
                             retorno = true;
                         }
                     }
-                    
+
                 }
                 else if (cboTIPO_DOC.SelectedIndex == 2)//si es FACTURA entonces
+                {
+                    if (Convert.ToDouble(lblTOTAL.Text) >= 700)  //tiene q escoger un cliente si la boleta es >= que 700
                     {
-                        if (Convert.ToDouble(lblTOTAL.Text) >= 700)  //tiene q escoger un cliente si la boleta es >= que 700
+                        if (txtCLIENTE_ID.Text != string.Empty) //
                         {
-                            if (txtCLIENTE_ID.Text != string.Empty) //
+                            if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
                             {
-                                if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
+                                if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
                                 {
-                                    if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
+                                    if (txtPAGA.Text != string.Empty)
                                     {
-                                        if (txtPAGA.Text != string.Empty)
-                                        {
-                                            retorno = true;
-                                        }
-                                        else
-                                        {
-                                            retorno = false;
-                                        }
+                                        retorno = true;
                                     }
                                     else
                                     {
                                         retorno = false;
-                                    }
-                                }
-                                else
-                                {
-                                    retorno = true;
-                                }
-                            }
-                            else //el id_cliente est vacio
-                            {
-                                retorno = false;
-                            }
-                         }
-                        else if (cboTIPO_DOC.SelectedIndex == 0)// es boleta y < de 700 entonces no interesa los datos del cliente
-                        {
-                            if (txtPAGA.Text != string.Empty)
-                            {
-
-                                if (Convert.ToDouble(txtPAGA.Text.ToString()) >= Convert.ToDouble(lblTOTAL.Text.ToString()))
-                                {
-                                    if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
-                                    {
-                                        if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
-                                        {
-                                            retorno = true;
-                                        }
-                                        else
-                                        {
-                                            retorno = false;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        retorno = true;
                                     }
                                 }
                                 else
@@ -1591,11 +1558,50 @@ namespace WindowsFormsApplication1
                             }
                             else
                             {
-                                retorno = false;
+                                retorno = true;
                             }
                         }
-
+                        else //el id_cliente est vacio
+                        {
+                            retorno = false;
+                        }
                     }
+                }
+                else if (cboTIPO_DOC.SelectedIndex == 0)// es boleta y < de 700 entonces no interesa los datos del cliente
+                {
+                    if (txtPAGA.Text != string.Empty)
+                    {
+
+                        if (Convert.ToDouble(txtPAGA.Text.ToString()) >= Convert.ToDouble(lblTOTAL.Text.ToString()))
+                        {
+                            if (cboTIPOPAGO.SelectedItem.ToString() != "EFECTIVO") //SI EL PAGO ES EN EFECTIVO
+                            {
+                                if (cboTIPOPAGO.Text != string.Empty) //SI EL CAMPO DONDE SE LLENA LA OPERACION YL NUMERO Y TODOS DATOS DEL DOCUMENTO DE OPERACION ESTA LLENO
+                                {
+                                    retorno = true;
+                                }
+                                else
+                                {
+                                    retorno = false;
+                                }
+                            }
+                            else
+                            {
+                                retorno = true;
+                            }
+                        }
+                        else
+                        {
+                            retorno = false;
+                        }
+                    }
+                    else
+                    {
+                        retorno = false;
+                    }
+                }
+
+                    
 
                 }
                 return retorno;
