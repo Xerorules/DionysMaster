@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRUCDNI = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 68);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(973, 545);
+            this.groupBox2.Size = new System.Drawing.Size(1102, 545);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -85,6 +85,7 @@
             this.txtRUCDNI.Size = new System.Drawing.Size(176, 20);
             this.txtRUCDNI.TabIndex = 16;
             this.txtRUCDNI.Tag = "";
+            this.txtRUCDNI.TextChanged += new System.EventHandler(this.txtRUCDNI_TextChanged);
             this.txtRUCDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRUCDNI_KeyPress);
             // 
             // label6
@@ -102,9 +103,10 @@
             // 
             this.txtNOMCLIENTE.Location = new System.Drawing.Point(13, 193);
             this.txtNOMCLIENTE.Name = "txtNOMCLIENTE";
-            this.txtNOMCLIENTE.Size = new System.Drawing.Size(176, 20);
+            this.txtNOMCLIENTE.Size = new System.Drawing.Size(257, 20);
             this.txtNOMCLIENTE.TabIndex = 14;
             this.txtNOMCLIENTE.Tag = "";
+            this.txtNOMCLIENTE.TextChanged += new System.EventHandler(this.txtNOMCLIENTE_TextChanged);
             this.txtNOMCLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNOMCLIENTE_KeyPress);
             // 
             // dgvClientes
@@ -114,27 +116,28 @@
             this.dgvClientes.AllowUserToResizeColumns = false;
             this.dgvClientes.AllowUserToResizeRows = false;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.Peru;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvClientes.Location = new System.Drawing.Point(205, 19);
+            this.dgvClientes.Location = new System.Drawing.Point(286, 19);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersVisible = false;
-            this.dgvClientes.Size = new System.Drawing.Size(762, 509);
+            this.dgvClientes.Size = new System.Drawing.Size(810, 509);
             this.dgvClientes.TabIndex = 13;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Sienna;
+            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(27, 339);
@@ -153,7 +156,7 @@
             this.txtNUMERODOC.Size = new System.Drawing.Size(176, 20);
             this.txtNUMERODOC.TabIndex = 7;
             this.txtNUMERODOC.Tag = "";
-            this.txtNUMERODOC.TextChanged += new System.EventHandler(this.txtFDNI_TextChanged);
+            
             // 
             // txtIDVENTA
             // 
@@ -163,7 +166,7 @@
             this.txtIDVENTA.TabIndex = 6;
             this.txtIDVENTA.Tag = "";
             this.txtIDVENTA.UseWaitCursor = true;
-            this.txtIDVENTA.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+           
             // 
             // label4
             // 
@@ -220,7 +223,8 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Sienna;
+            this.button2.BackColor = System.Drawing.Color.Orange;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(28, 442);
@@ -235,8 +239,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(997, 624);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(1126, 624);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);

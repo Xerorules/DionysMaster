@@ -46,10 +46,8 @@ namespace WindowsFormsApplication1
         }
 
         private void BUSCAR_CLIENTE_Load(object sender, EventArgs e)
-        {/*
-            llenar_tipo_cliente();
-            P_LISTAR_DEPARTAMENTO();//AQUI CARGAMOS LA LISTA DE DEPARTAMENTOS
-
+        {
+            
             vFILTRO = " ESTADO = 1";
 
             //crea botones en el gridview
@@ -60,12 +58,11 @@ namespace WindowsFormsApplication1
             colBotones.UseColumnTextForButtonValue = true;
             this.dgvClientes.Columns.Add(colBotones);
             //------------------------------------------------------------///
-            CARGAR_DATOS(CONCATENAR_CONDICION());
-            cboMC_DEPARTAMENTO_SelectedIndexChanged(sender, e);
-            cboMC_PROVINCIA_SelectedIndexChanged(sender, e);
+           // CARGAR_DATOS();
+            
             //DataTable detalle = (DataTable)OBJINT.vPdt_detBien;
 
-            */
+            
 
         }
 
@@ -78,50 +75,7 @@ namespace WindowsFormsApplication1
 
 
         #endregion
-
-        private void cboMC_DEPARTAMENTO_SelectedIndexChanged(object sender, EventArgs e)
-        {/*
-            P_LISTAR_PROVINCIA(cboMC_DEPARTAMENTO.SelectedValue.ToString());
-            cboMC_PROVINCIA_SelectedIndexChanged(sender, e);*/
-        }
-
-        private void cboMC_PROVINCIA_SelectedIndexChanged(object sender, EventArgs e)
-        {/*
-            P_LISTAR_DISTRITO(cboMC_PROVINCIA.SelectedValue.ToString());*/
-        }
-
-        void P_LISTAR_DEPARTAMENTO()
-        {/*
-            DataTable dt = N_OBJCLIENTE.LISTAR_DEPARTAMENTO();
-            cboMC_DEPARTAMENTO.DataSource = dt;
-            cboMC_DEPARTAMENTO.ValueMember = "UBIDEP";
-            cboMC_DEPARTAMENTO.DisplayMember = "UBIDEN";
-
-            //cboMC_DEPARTAMENTO.DataBind();*/
-        }
-        void P_LISTAR_PROVINCIA(string depart)
-        {/*
-            DataTable dt = N_OBJCLIENTE.LISTAR_PROVINCIA(depart);
-            cboMC_PROVINCIA.DataSource = dt;
-            cboMC_PROVINCIA.ValueMember = "UBIPRV";
-            cboMC_PROVINCIA.DisplayMember = "UBIPRN";
-
-            //cboMC_PROVINCIA.DataBind();*/
-        }
-        void P_LISTAR_DISTRITO(string prov)
-        {/*
-            DataTable dt = N_OBJCLIENTE.LISTAR_DISTRITO(prov);
-            cboMC_DISTRITO.DataSource = dt;
-            cboMC_DISTRITO.ValueMember = "UBIDST";
-            cboMC_DISTRITO.DisplayMember = "UBIDSN";
-
-            //cboMC_DISTRITO.DataBind();*/
-        }
-
-        private void cboMC_DISTRITO_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //
-        }
+ 
 
         void autocompletar_DESCRIPCION()
         {
@@ -213,77 +167,20 @@ namespace WindowsFormsApplication1
             {
             }
         }
+        
+        public void CARGAR_DATOS()
+        {
 
-       
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {/*
-            autocompletar_DESCRIPCION();
-            vFILTRO = " ESTADO = 1";
-            CARGAR_DATOS(CONCATENAR_CONDICION());*/
-
-        }
-
-        private void txtFDNI_TextChanged(object sender, EventArgs e)
-        {/*
-            autocompletar_dni_ruc();
-            vFILTRO = " ESTADO = 1";
-            CARGAR_DATOS(CONCATENAR_CONDICION());*/
-        }
-
-
-        public void CARGAR_DATOS(string pCONDICION)
-        {/*
+            con.Open();
+            SqlCommand cmv = new SqlCommand("SELECT DESCRIPCION FROM CLIENTE where RUC_DNI = '" + txtRUCDNI.Text + "'", con);
             DataTable dt = new DataTable();
-            dt= N_OBJCLIENTE.CONSULTA_LISTA_CLIENTES(pCONDICION);
-            dgvClientes.DataSource = dt;
-            */
-        }
-
-        /* public string CONCATENAR_CONDICION()
-         {
-             if (textBox1.Text != string.Empty)
-             {
-                 vFILTRO = " DESCRIPCION LIKE '%" + textBox1.Text + "%'";
-             }
-
-             if (txtFDNI.Text != string.Empty)
-             {
-                 vFILTRO += " AND RUC_DNI LIKE '%" + txtFDNI.Text + "%'";
-             }
-             if (cboTipoCliente.SelectedIndex != 0)
-             {
-                 vFILTRO += " AND TIPO_CLIENTE = '" + cboTipoCliente.SelectedValue + "'";
-             }
-             if (cboMC_DEPARTAMENTO.SelectedIndex != 0)
-             {
-                 vFILTRO += " AND UBIDEN = '%" + cboMC_DEPARTAMENTO.SelectedItem + "%'";
-             }
-             if (cboMC_PROVINCIA.SelectedIndex != 0)
-             {
-                 vFILTRO += " AND UBIPRN = '%" + cboMC_PROVINCIA.SelectedItem + "%'";
-             }
-             if (cboMC_DISTRITO.SelectedIndex != 0)
-             {
-                 vFILTRO += " AND UBIDSN = '%" + cboMC_DISTRITO.SelectedItem + "%'";
-             }
-
-
-
-             return vFILTRO;
-         }*/
-
-        public void llenar_tipo_cliente()
-        {/*
-            List<ListaTipoProd> List = new List<ListaTipoProd>();
-
-            List.Add(new ListaTipoProd { texto = "P. NATURAL", value = "PN" });
-            List.Add(new ListaTipoProd { texto = "P. JURIDICA", value = "PJ" });
+            SqlDataAdapter da = new SqlDataAdapter(cmv);
+            da.Fill(dt);
+            txtNOMCLIENTE.Text = dt.Rows[0][0].ToString();
+            con.Close();
             
-            cboTipoCliente.DataSource = List;
-            cboTipoCliente.DisplayMember = "texto";
-            cboTipoCliente.ValueMember = "value";
-            cboTipoCliente.SelectedIndex = 0;*/
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {/*
@@ -293,7 +190,7 @@ namespace WindowsFormsApplication1
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {/*
+        {
             if (this.dgvClientes.Columns[e.ColumnIndex].Name == "colBotones")
             {
                // T_DETALLE detalle = new T_DETALLE();
@@ -324,7 +221,7 @@ namespace WindowsFormsApplication1
                 OBJINT.v_saldo_fin = bc_saldo_fin;
                 //OBJINT.Visible = true;/*REVISAR HACER QUE MANDE VALORES SIN LODEAR
                 this.Close();
-        }*/
+            }
         
         }
 
@@ -345,11 +242,52 @@ namespace WindowsFormsApplication1
 
         private void txtNOMCLIENTE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-            autocompletar_DESCRIPCION();
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void txtRUCDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNOMCLIENTE_TextChanged(object sender, EventArgs e)
+        {
+
+            autocompletar_DESCRIPCION();
+        }
+
+        private void txtRUCDNI_TextChanged(object sender, EventArgs e)
         {
             autocompletar_dni_ruc();
         }
