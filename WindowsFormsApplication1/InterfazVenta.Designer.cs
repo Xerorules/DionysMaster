@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.lblCajaIDVentas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -109,11 +109,11 @@
             this.button1.FlatAppearance.BorderSize = 5;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1382, 775);
+            this.button1.Location = new System.Drawing.Point(1288, 662);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 70);
+            this.button1.Size = new System.Drawing.Size(175, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "<<< REGRESAR A CAJA ";
             this.button1.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1346, 34);
+            this.button2.Location = new System.Drawing.Point(1224, 31);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 45);
@@ -249,7 +249,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(892, 43);
+            this.label8.Location = new System.Drawing.Point(760, 38);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 25);
             this.label8.TabIndex = 12;
@@ -259,7 +259,7 @@
             // 
             this.txtCLIENTE_VENTA.BackColor = System.Drawing.Color.Azure;
             this.txtCLIENTE_VENTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCLIENTE_VENTA.Location = new System.Drawing.Point(999, 44);
+            this.txtCLIENTE_VENTA.Location = new System.Drawing.Point(867, 39);
             this.txtCLIENTE_VENTA.Name = "txtCLIENTE_VENTA";
             this.txtCLIENTE_VENTA.Size = new System.Drawing.Size(328, 26);
             this.txtCLIENTE_VENTA.TabIndex = 13;
@@ -272,7 +272,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(1147, 175);
+            this.label9.Location = new System.Drawing.Point(1015, 154);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(180, 50);
             this.label9.TabIndex = 14;
@@ -282,7 +282,7 @@
             // 
             this.txtPAGA.BackColor = System.Drawing.Color.Azure;
             this.txtPAGA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPAGA.Location = new System.Drawing.Point(1324, 180);
+            this.txtPAGA.Location = new System.Drawing.Point(1198, 159);
             this.txtPAGA.Name = "txtPAGA";
             this.txtPAGA.Size = new System.Drawing.Size(101, 47);
             this.txtPAGA.TabIndex = 15;
@@ -294,7 +294,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1447, 164);
+            this.button3.Location = new System.Drawing.Point(1321, 143);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 74);
             this.button3.TabIndex = 16;
@@ -309,7 +309,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(58, 131);
+            this.label10.Location = new System.Drawing.Point(58, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 57);
             this.label10.TabIndex = 17;
@@ -326,24 +326,24 @@
             this.dgvBIEN_VENTA.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvBIEN_VENTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBIEN_VENTA.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvBIEN_VENTA.Location = new System.Drawing.Point(757, 273);
+            this.dgvBIEN_VENTA.Location = new System.Drawing.Point(748, 248);
             this.dgvBIEN_VENTA.MultiSelect = false;
             this.dgvBIEN_VENTA.Name = "dgvBIEN_VENTA";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBIEN_VENTA.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBIEN_VENTA.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBIEN_VENTA.RowHeadersVisible = false;
             this.dgvBIEN_VENTA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.dgvBIEN_VENTA.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvBIEN_VENTA.Size = new System.Drawing.Size(788, 368);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvBIEN_VENTA.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBIEN_VENTA.Size = new System.Drawing.Size(720, 368);
             this.dgvBIEN_VENTA.TabIndex = 18;
             this.dgvBIEN_VENTA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBIEN_VENTA_CellContentClick);
             // 
@@ -353,7 +353,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(73, 208);
+            this.label11.Location = new System.Drawing.Point(73, 179);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 25);
             this.label11.TabIndex = 19;
@@ -365,7 +365,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(348, 213);
+            this.label12.Location = new System.Drawing.Point(348, 184);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 25);
             this.label12.TabIndex = 20;
@@ -375,7 +375,7 @@
             // 
             this.txtCANTIDAD_VENTA.BackColor = System.Drawing.Color.Azure;
             this.txtCANTIDAD_VENTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCANTIDAD_VENTA.Location = new System.Drawing.Point(152, 153);
+            this.txtCANTIDAD_VENTA.Location = new System.Drawing.Point(152, 124);
             this.txtCANTIDAD_VENTA.Name = "txtCANTIDAD_VENTA";
             this.txtCANTIDAD_VENTA.Size = new System.Drawing.Size(131, 26);
             this.txtCANTIDAD_VENTA.TabIndex = 21;
@@ -384,7 +384,7 @@
             // 
             this.txtPRECIO_VENTA.BackColor = System.Drawing.Color.Azure;
             this.txtPRECIO_VENTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPRECIO_VENTA.Location = new System.Drawing.Point(152, 209);
+            this.txtPRECIO_VENTA.Location = new System.Drawing.Point(152, 180);
             this.txtPRECIO_VENTA.Name = "txtPRECIO_VENTA";
             this.txtPRECIO_VENTA.Size = new System.Drawing.Size(131, 26);
             this.txtPRECIO_VENTA.TabIndex = 22;
@@ -395,7 +395,7 @@
             this.cboCLASE_BIEN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCLASE_BIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCLASE_BIEN.FormattingEnabled = true;
-            this.cboCLASE_BIEN.Location = new System.Drawing.Point(500, 209);
+            this.cboCLASE_BIEN.Location = new System.Drawing.Point(500, 180);
             this.cboCLASE_BIEN.Name = "cboCLASE_BIEN";
             this.cboCLASE_BIEN.Size = new System.Drawing.Size(198, 28);
             this.cboCLASE_BIEN.TabIndex = 23;
@@ -408,7 +408,7 @@
             this.btnBIEN01.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN01.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN01.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN01.Location = new System.Drawing.Point(63, 273);
+            this.btnBIEN01.Location = new System.Drawing.Point(63, 234);
             this.btnBIEN01.Name = "btnBIEN01";
             this.btnBIEN01.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN01.TabIndex = 24;
@@ -422,7 +422,7 @@
             this.btnBIEN02.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN02.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN02.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN02.Location = new System.Drawing.Point(222, 273);
+            this.btnBIEN02.Location = new System.Drawing.Point(222, 234);
             this.btnBIEN02.Name = "btnBIEN02";
             this.btnBIEN02.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN02.TabIndex = 25;
@@ -436,7 +436,7 @@
             this.btnBIEN03.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN03.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN03.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN03.Location = new System.Drawing.Point(381, 273);
+            this.btnBIEN03.Location = new System.Drawing.Point(381, 234);
             this.btnBIEN03.Name = "btnBIEN03";
             this.btnBIEN03.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN03.TabIndex = 26;
@@ -450,7 +450,7 @@
             this.btnBIEN04.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN04.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN04.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN04.Location = new System.Drawing.Point(538, 273);
+            this.btnBIEN04.Location = new System.Drawing.Point(538, 234);
             this.btnBIEN04.Name = "btnBIEN04";
             this.btnBIEN04.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN04.TabIndex = 27;
@@ -464,7 +464,7 @@
             this.btnBIEN05.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN05.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN05.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN05.Location = new System.Drawing.Point(63, 371);
+            this.btnBIEN05.Location = new System.Drawing.Point(63, 332);
             this.btnBIEN05.Name = "btnBIEN05";
             this.btnBIEN05.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN05.TabIndex = 28;
@@ -478,7 +478,7 @@
             this.btnBIEN06.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN06.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN06.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN06.Location = new System.Drawing.Point(222, 371);
+            this.btnBIEN06.Location = new System.Drawing.Point(222, 332);
             this.btnBIEN06.Name = "btnBIEN06";
             this.btnBIEN06.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN06.TabIndex = 29;
@@ -492,7 +492,7 @@
             this.btnBIEN07.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN07.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN07.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN07.Location = new System.Drawing.Point(381, 371);
+            this.btnBIEN07.Location = new System.Drawing.Point(381, 332);
             this.btnBIEN07.Name = "btnBIEN07";
             this.btnBIEN07.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN07.TabIndex = 30;
@@ -506,7 +506,7 @@
             this.btnBIEN08.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN08.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN08.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN08.Location = new System.Drawing.Point(538, 371);
+            this.btnBIEN08.Location = new System.Drawing.Point(538, 332);
             this.btnBIEN08.Name = "btnBIEN08";
             this.btnBIEN08.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN08.TabIndex = 31;
@@ -520,7 +520,7 @@
             this.btnBIEN09.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN09.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN09.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN09.Location = new System.Drawing.Point(63, 472);
+            this.btnBIEN09.Location = new System.Drawing.Point(63, 433);
             this.btnBIEN09.Name = "btnBIEN09";
             this.btnBIEN09.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN09.TabIndex = 32;
@@ -534,7 +534,7 @@
             this.btnBIEN10.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN10.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN10.Location = new System.Drawing.Point(222, 472);
+            this.btnBIEN10.Location = new System.Drawing.Point(222, 433);
             this.btnBIEN10.Name = "btnBIEN10";
             this.btnBIEN10.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN10.TabIndex = 33;
@@ -548,7 +548,7 @@
             this.btnBIEN11.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN11.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN11.Location = new System.Drawing.Point(381, 472);
+            this.btnBIEN11.Location = new System.Drawing.Point(381, 433);
             this.btnBIEN11.Name = "btnBIEN11";
             this.btnBIEN11.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN11.TabIndex = 34;
@@ -561,7 +561,7 @@
             this.btnBIEN12.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBIEN12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN12.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN12.Location = new System.Drawing.Point(538, 472);
+            this.btnBIEN12.Location = new System.Drawing.Point(538, 433);
             this.btnBIEN12.Name = "btnBIEN12";
             this.btnBIEN12.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN12.TabIndex = 35;
@@ -575,7 +575,7 @@
             this.btnBIEN13.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN13.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN13.Location = new System.Drawing.Point(63, 573);
+            this.btnBIEN13.Location = new System.Drawing.Point(63, 534);
             this.btnBIEN13.Name = "btnBIEN13";
             this.btnBIEN13.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN13.TabIndex = 36;
@@ -589,7 +589,7 @@
             this.btnBIEN14.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN14.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN14.Location = new System.Drawing.Point(222, 573);
+            this.btnBIEN14.Location = new System.Drawing.Point(222, 534);
             this.btnBIEN14.Name = "btnBIEN14";
             this.btnBIEN14.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN14.TabIndex = 37;
@@ -603,7 +603,7 @@
             this.btnBIEN15.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN15.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN15.Location = new System.Drawing.Point(381, 573);
+            this.btnBIEN15.Location = new System.Drawing.Point(381, 534);
             this.btnBIEN15.Name = "btnBIEN15";
             this.btnBIEN15.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN15.TabIndex = 38;
@@ -617,7 +617,7 @@
             this.btnBIEN16.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN16.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN16.Location = new System.Drawing.Point(538, 573);
+            this.btnBIEN16.Location = new System.Drawing.Point(538, 534);
             this.btnBIEN16.Name = "btnBIEN16";
             this.btnBIEN16.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN16.TabIndex = 39;
@@ -631,7 +631,7 @@
             this.btnBIEN17.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN17.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN17.Location = new System.Drawing.Point(63, 674);
+            this.btnBIEN17.Location = new System.Drawing.Point(63, 635);
             this.btnBIEN17.Name = "btnBIEN17";
             this.btnBIEN17.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN17.TabIndex = 40;
@@ -645,7 +645,7 @@
             this.btnBIEN18.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN18.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN18.Location = new System.Drawing.Point(222, 674);
+            this.btnBIEN18.Location = new System.Drawing.Point(222, 635);
             this.btnBIEN18.Name = "btnBIEN18";
             this.btnBIEN18.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN18.TabIndex = 41;
@@ -659,7 +659,7 @@
             this.btnBIEN19.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN19.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN19.Location = new System.Drawing.Point(381, 674);
+            this.btnBIEN19.Location = new System.Drawing.Point(381, 635);
             this.btnBIEN19.Name = "btnBIEN19";
             this.btnBIEN19.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN19.TabIndex = 42;
@@ -673,7 +673,7 @@
             this.btnBIEN20.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
             this.btnBIEN20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIEN20.ForeColor = System.Drawing.Color.White;
-            this.btnBIEN20.Location = new System.Drawing.Point(538, 674);
+            this.btnBIEN20.Location = new System.Drawing.Point(538, 635);
             this.btnBIEN20.Name = "btnBIEN20";
             this.btnBIEN20.Size = new System.Drawing.Size(160, 100);
             this.btnBIEN20.TabIndex = 43;
@@ -718,7 +718,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(892, 87);
+            this.label4.Location = new System.Drawing.Point(760, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 47;
@@ -728,7 +728,7 @@
             // 
             this.txtCLIENTE_RUC.BackColor = System.Drawing.Color.Azure;
             this.txtCLIENTE_RUC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCLIENTE_RUC.Location = new System.Drawing.Point(999, 88);
+            this.txtCLIENTE_RUC.Location = new System.Drawing.Point(867, 83);
             this.txtCLIENTE_RUC.Name = "txtCLIENTE_RUC";
             this.txtCLIENTE_RUC.Size = new System.Drawing.Size(230, 26);
             this.txtCLIENTE_RUC.TabIndex = 48;
@@ -740,7 +740,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(892, 134);
+            this.label13.Location = new System.Drawing.Point(760, 129);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 25);
             this.label13.TabIndex = 49;
@@ -750,7 +750,7 @@
             // 
             this.txtCLIENTE_ID.BackColor = System.Drawing.Color.Azure;
             this.txtCLIENTE_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCLIENTE_ID.Location = new System.Drawing.Point(999, 135);
+            this.txtCLIENTE_ID.Location = new System.Drawing.Point(867, 130);
             this.txtCLIENTE_ID.Name = "txtCLIENTE_ID";
             this.txtCLIENTE_ID.Size = new System.Drawing.Size(114, 26);
             this.txtCLIENTE_ID.TabIndex = 50;
@@ -772,7 +772,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(849, 659);
+            this.groupBox1.Location = new System.Drawing.Point(787, 635);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(478, 115);
             this.groupBox1.TabIndex = 55;
@@ -836,7 +836,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1578, 0);
+            this.button4.Location = new System.Drawing.Point(1440, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(46, 40);
             this.button4.TabIndex = 61;
@@ -859,9 +859,9 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Location = new System.Drawing.Point(-1, 875);
+            this.panel2.Location = new System.Drawing.Point(-1, 774);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1625, 46);
+            this.panel2.Size = new System.Drawing.Size(1537, 46);
             this.panel2.TabIndex = 54;
             // 
             // lblFecha
@@ -869,7 +869,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(1519, 10);
+            this.lblFecha.Location = new System.Drawing.Point(1380, 10);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(73, 20);
             this.lblFecha.TabIndex = 7;
@@ -880,7 +880,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(1469, 10);
+            this.label22.Location = new System.Drawing.Point(1317, 10);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(54, 20);
             this.label22.TabIndex = 6;
@@ -891,7 +891,7 @@
             this.lblSede.AutoSize = true;
             this.lblSede.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.White;
-            this.lblSede.Location = new System.Drawing.Point(1026, 10);
+            this.lblSede.Location = new System.Drawing.Point(943, 10);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(73, 20);
             this.lblSede.TabIndex = 5;
@@ -902,7 +902,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(983, 10);
+            this.label20.Location = new System.Drawing.Point(884, 10);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 20);
             this.label20.TabIndex = 4;
@@ -955,7 +955,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1624, 943);
+            this.ClientSize = new System.Drawing.Size(1482, 832);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblTicket);
