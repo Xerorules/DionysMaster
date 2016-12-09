@@ -408,8 +408,9 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro("IMPORTE: " + dgvClientes.CurrentRow.Cells[11].Value.ToString());
             Ticket1.LineasGuion(); // imprime una linea de guiones
             Ticket1.TextoCentro("CLIENTE: " + dgvClientes.CurrentRow.Cells[5].Value.ToString());
+            Ticket1.TextoCentro("RUC/DNI: " + dgvClientes.CurrentRow.Cells[6].Value.ToString());
             Ticket1.TextoCentro("DOC: " + dgvClientes.CurrentRow.Cells[3].Value.ToString()+" "+ dgvClientes.CurrentRow.Cells[4].Value.ToString());
-            Ticket1.LineasGuion(); // imprime una linea de guiones
+            
             Ticket1.TextoCentro(dgvClientes.CurrentRow.Cells[22].Value.ToString()); 
             Ticket1.LineasGuion(); // imprime una linea de guiones
 
@@ -762,15 +763,17 @@ namespace WindowsFormsApplication1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.Text == "RIDIONYS2016")
-            {
-                estado = 1;
-                lblBuscar.Visible = true;
-                lblIngrese.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("INGRESE EL CODIGO CORRECTO");
+            if (textBox3.TextLength == 12) {
+                if (textBox3.Text == "RIDIONYS2016")
+                {
+                    estado = 1;
+                    lblBuscar.Visible = true;
+                    lblIngrese.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("INGRESE EL CODIGO CORRECTO");
+                }
             }
             validar_estado();
         }

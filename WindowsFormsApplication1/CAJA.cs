@@ -308,7 +308,7 @@ namespace WindowsFormsApplication1
 
         private void btnMOVIMIENTOS_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -318,7 +318,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -414,7 +415,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Hide();
             REIMPRESIONES BC = new REIMPRESIONES();
             BC.ShowDialog();
         }

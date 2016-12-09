@@ -1463,6 +1463,17 @@ namespace WindowsFormsApplication1
         {
 
         }
+        
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            this.button3.BackColor = Color.Pink;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            this.button3.BackColor = Color.CornflowerBlue;
+        }
 
         private bool VALIDAR_DATOS()
         {

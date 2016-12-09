@@ -308,7 +308,7 @@
             this.btnVentaRapida.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnVentaRapida.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clasificacion;
             this.btnVentaRapida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnVentaRapida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVentaRapida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentaRapida.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentaRapida.ForeColor = System.Drawing.Color.White;
             this.btnVentaRapida.Location = new System.Drawing.Point(188, 600);
@@ -325,7 +325,7 @@
             this.button1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.impresora;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(677, 600);
@@ -342,7 +342,7 @@
             this.btnMOVIMIENTOS.BackColor = System.Drawing.Color.MediumPurple;
             this.btnMOVIMIENTOS.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.movimiento_de_la_mano;
             this.btnMOVIMIENTOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMOVIMIENTOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMOVIMIENTOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMOVIMIENTOS.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMOVIMIENTOS.ForeColor = System.Drawing.Color.White;
             this.btnMOVIMIENTOS.Location = new System.Drawing.Point(430, 600);

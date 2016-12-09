@@ -550,7 +550,7 @@ namespace WindowsFormsApplication1
             rdbANULADOS.Checked = false;
             rdbTODOS.Checked = true;
             txtDATA_BUSQUEDA.Text = string.Empty; //LIMPIAR EL CAMPO DE BUSQUEDA
-            dgvMOV_CAJAKARDEX.CurrentCell.Selected = false; //SELECCIONA EL PPRIMER REGISTRO
+            try { dgvMOV_CAJAKARDEX.CurrentCell.Selected = false; } catch { } //SELECCIONA EL PPRIMER REGISTRO
             SELECCIONAR_REGISTRO_CARGADATA(); //AQUI CARGO POR PRIMERA VEZ TODOS LOS CAMPOS SELECIONADOS DE LA GRILLA
             ESTADO_TEXBOX_VENTA(2);
 
@@ -560,7 +560,7 @@ namespace WindowsFormsApplication1
         {
             rdbSOLES.Checked = true;
             ESTADO_TRANSACCION(2); //CON ESTO CONTROLAMOS LA ACTIVIDAD O INACTIVIDAD DE LOS CONTROLES
-            dgvMOV_CAJAKARDEX.CurrentCell.Selected = false; //ESTO NO SELECCIONA NINGUN REGISTRO
+            try { dgvMOV_CAJAKARDEX.CurrentCell.Selected = false; } catch { } //ESTO NO SELECCIONA NINGUN REGISTRO
             LLENAR_COMBO_TIPOMOV();
             LLENAR_COMBO_TIPOPAGO();
             ESTADO_TEXBOX_VENTA(1);
