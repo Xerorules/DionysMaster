@@ -1459,6 +1459,11 @@ namespace WindowsFormsApplication1
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void cboTIPO_DOC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private bool VALIDAR_DATOS()
         {
             bool retorno = false;

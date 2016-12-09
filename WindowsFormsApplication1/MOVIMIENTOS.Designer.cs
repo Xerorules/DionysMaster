@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtID_MOVIMIENTO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -128,6 +128,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(10, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -139,6 +140,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(10, 52);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -162,6 +164,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gold;
             this.label4.Location = new System.Drawing.Point(10, 93);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -173,6 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gold;
             this.label5.Location = new System.Drawing.Point(12, 149);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -184,6 +188,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gold;
             this.label6.Location = new System.Drawing.Point(410, 148);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -195,6 +200,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gold;
             this.label7.Location = new System.Drawing.Point(12, 221);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -281,6 +287,7 @@
             // 
             this.LBLTITULO.AutoSize = true;
             this.LBLTITULO.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTITULO.ForeColor = System.Drawing.Color.Gold;
             this.LBLTITULO.Location = new System.Drawing.Point(62, 9);
             this.LBLTITULO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLTITULO.Name = "LBLTITULO";
@@ -351,6 +358,7 @@
             // rdbDOLARES
             // 
             this.rdbDOLARES.AutoSize = true;
+            this.rdbDOLARES.ForeColor = System.Drawing.Color.Gold;
             this.rdbDOLARES.Location = new System.Drawing.Point(267, 149);
             this.rdbDOLARES.Name = "rdbDOLARES";
             this.rdbDOLARES.Size = new System.Drawing.Size(104, 22);
@@ -372,6 +380,7 @@
             // rdbTICKET
             // 
             this.rdbTICKET.AutoSize = true;
+            this.rdbTICKET.ForeColor = System.Drawing.Color.Gold;
             this.rdbTICKET.Location = new System.Drawing.Point(92, 17);
             this.rdbTICKET.Name = "rdbTICKET";
             this.rdbTICKET.Size = new System.Drawing.Size(84, 22);
@@ -383,6 +392,7 @@
             // rdbPDF
             // 
             this.rdbPDF.AutoSize = true;
+            this.rdbPDF.ForeColor = System.Drawing.Color.Gold;
             this.rdbPDF.Location = new System.Drawing.Point(18, 17);
             this.rdbPDF.Name = "rdbPDF";
             this.rdbPDF.Size = new System.Drawing.Size(59, 22);
@@ -491,6 +501,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gold;
             this.label13.Location = new System.Drawing.Point(730, 62);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(141, 20);
@@ -509,6 +520,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gold;
             this.label12.Location = new System.Drawing.Point(779, 96);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 20);
@@ -530,6 +542,7 @@
             // rdbSOLES
             // 
             this.rdbSOLES.AutoSize = true;
+            this.rdbSOLES.ForeColor = System.Drawing.Color.Gold;
             this.rdbSOLES.Location = new System.Drawing.Point(171, 149);
             this.rdbSOLES.Name = "rdbSOLES";
             this.rdbSOLES.Size = new System.Drawing.Size(81, 22);
@@ -630,19 +643,19 @@
             this.dgvMOV_CAJAKARDEX.AllowUserToDeleteRows = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeColumns = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew;
-            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMOV_CAJAKARDEX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvMOV_CAJAKARDEX.BackgroundColor = System.Drawing.Color.DarkCyan;
             this.dgvMOV_CAJAKARDEX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMOV_CAJAKARDEX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMOV_CAJAKARDEX.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMOV_CAJAKARDEX.GridColor = System.Drawing.Color.DarkOrange;
@@ -650,18 +663,18 @@
             this.dgvMOV_CAJAKARDEX.MultiSelect = false;
             this.dgvMOV_CAJAKARDEX.Name = "dgvMOV_CAJAKARDEX";
             this.dgvMOV_CAJAKARDEX.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMOV_CAJAKARDEX.RowHeadersVisible = false;
             this.dgvMOV_CAJAKARDEX.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMOV_CAJAKARDEX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMOV_CAJAKARDEX.Size = new System.Drawing.Size(1311, 294);
             this.dgvMOV_CAJAKARDEX.TabIndex = 19;
@@ -706,6 +719,7 @@
             // rdbTODOS
             // 
             this.rdbTODOS.AutoSize = true;
+            this.rdbTODOS.ForeColor = System.Drawing.Color.Gold;
             this.rdbTODOS.Location = new System.Drawing.Point(421, 14);
             this.rdbTODOS.Name = "rdbTODOS";
             this.rdbTODOS.Size = new System.Drawing.Size(74, 22);
@@ -730,6 +744,7 @@
             // rdbANULADOS
             // 
             this.rdbANULADOS.AutoSize = true;
+            this.rdbANULADOS.ForeColor = System.Drawing.Color.Gold;
             this.rdbANULADOS.Location = new System.Drawing.Point(320, 14);
             this.rdbANULADOS.Name = "rdbANULADOS";
             this.rdbANULADOS.Size = new System.Drawing.Size(95, 22);
@@ -742,6 +757,7 @@
             // rdbACTIVOS
             // 
             this.rdbACTIVOS.AutoSize = true;
+            this.rdbACTIVOS.ForeColor = System.Drawing.Color.Gold;
             this.rdbACTIVOS.Location = new System.Drawing.Point(233, 14);
             this.rdbACTIVOS.Name = "rdbACTIVOS";
             this.rdbACTIVOS.Size = new System.Drawing.Size(81, 22);
@@ -777,6 +793,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Gold;
             this.label23.Location = new System.Drawing.Point(10, 15);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
@@ -793,6 +810,7 @@
             this.groupBox4.Controls.Add(this.txtTOTALDOLARES);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.ForeColor = System.Drawing.Color.Gold;
             this.groupBox4.Location = new System.Drawing.Point(0, 97);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1412, 75);
@@ -825,6 +843,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Gold;
             this.label15.Location = new System.Drawing.Point(1025, 34);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
@@ -836,6 +855,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Gold;
             this.label25.Location = new System.Drawing.Point(179, 34);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
@@ -858,6 +878,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Gold;
             this.label26.Location = new System.Drawing.Point(549, 34);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
@@ -988,7 +1009,7 @@
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1374, 924);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);

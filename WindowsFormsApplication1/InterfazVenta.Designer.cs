@@ -105,9 +105,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatAppearance.BorderSize = 5;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1406, 790);
@@ -165,6 +166,7 @@
             this.cboTIPO_DOC.Name = "cboTIPO_DOC";
             this.cboTIPO_DOC.Size = new System.Drawing.Size(143, 28);
             this.cboTIPO_DOC.TabIndex = 4;
+            this.cboTIPO_DOC.SelectedIndexChanged += new System.EventHandler(this.cboTIPO_DOC_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -193,6 +195,8 @@
             // 
             this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(1346, 34);
@@ -287,6 +291,8 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(1447, 164);
