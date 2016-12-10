@@ -300,6 +300,11 @@ namespace WindowsFormsApplication1
         {
             DataTable dt = vPdt_detBien;
             dgvBIEN_VENTA.DataSource = dt;
+            dgvBIEN_VENTA.Columns[0].Width = 70;
+            dgvBIEN_VENTA.Columns[1].Width = 40;
+            dgvBIEN_VENTA.Columns[2].Width = 400;
+            dgvBIEN_VENTA.Columns[3].Width = 50;
+            dgvBIEN_VENTA.Columns[4].Width = 60;
 
         }
 

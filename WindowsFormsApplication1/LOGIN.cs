@@ -294,5 +294,13 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void txtCLAVE_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnINGRESAR.PerformClick();
+            }
+        }
     }
 }

@@ -177,6 +177,7 @@
             this.txtCLAVE.PasswordChar = '*';
             this.txtCLAVE.Size = new System.Drawing.Size(440, 25);
             this.txtCLAVE.TabIndex = 9;
+            this.txtCLAVE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCLAVE_KeyDown);
             // 
             // button1
             // 

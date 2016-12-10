@@ -410,7 +410,6 @@ namespace WindowsFormsApplication1
             Ticket1.TextoCentro("CLIENTE: " + dgvClientes.CurrentRow.Cells[5].Value.ToString());
             Ticket1.TextoCentro("RUC/DNI: " + dgvClientes.CurrentRow.Cells[6].Value.ToString());
             Ticket1.TextoCentro("DOC: " + dgvClientes.CurrentRow.Cells[3].Value.ToString()+" "+ dgvClientes.CurrentRow.Cells[4].Value.ToString());
-            
             Ticket1.TextoCentro(dgvClientes.CurrentRow.Cells[22].Value.ToString()); 
             Ticket1.LineasGuion(); // imprime una linea de guiones
 

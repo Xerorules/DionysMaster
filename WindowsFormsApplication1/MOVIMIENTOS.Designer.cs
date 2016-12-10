@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtID_MOVIMIENTO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,6 @@
             this.rdbDOLARES = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rdbTICKET = new System.Windows.Forms.RadioButton();
-            this.rdbPDF = new System.Windows.Forms.RadioButton();
             this.btnIMPRIMIR_REPORTCAJA = new System.Windows.Forms.Button();
             this.btnIMPRIMIR = new System.Windows.Forms.Button();
             this.btnCANCELAR = new System.Windows.Forms.Button();
@@ -116,11 +115,11 @@
             // 
             this.txtID_MOVIMIENTO.BackColor = System.Drawing.Color.LightCyan;
             this.txtID_MOVIMIENTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID_MOVIMIENTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID_MOVIMIENTO.Location = new System.Drawing.Point(174, 14);
+            this.txtID_MOVIMIENTO.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID_MOVIMIENTO.Location = new System.Drawing.Point(174, 19);
             this.txtID_MOVIMIENTO.Margin = new System.Windows.Forms.Padding(4);
             this.txtID_MOVIMIENTO.Name = "txtID_MOVIMIENTO";
-            this.txtID_MOVIMIENTO.Size = new System.Drawing.Size(128, 24);
+            this.txtID_MOVIMIENTO.Size = new System.Drawing.Size(128, 27);
             this.txtID_MOVIMIENTO.TabIndex = 0;
             this.txtID_MOVIMIENTO.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -129,7 +128,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(10, 14);
+            this.label1.Location = new System.Drawing.Point(10, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 21);
@@ -165,7 +164,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(10, 93);
+            this.label4.Location = new System.Drawing.Point(10, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 21);
@@ -224,11 +223,11 @@
             // 
             this.txtFECHA.BackColor = System.Drawing.Color.LightCyan;
             this.txtFECHA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFECHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFECHA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFECHA.Location = new System.Drawing.Point(174, 51);
             this.txtFECHA.Margin = new System.Windows.Forms.Padding(4);
             this.txtFECHA.Name = "txtFECHA";
-            this.txtFECHA.Size = new System.Drawing.Size(252, 24);
+            this.txtFECHA.Size = new System.Drawing.Size(252, 27);
             this.txtFECHA.TabIndex = 9;
             this.txtFECHA.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -249,11 +248,11 @@
             // 
             this.txtDESCRIPCION.BackColor = System.Drawing.Color.LightCyan;
             this.txtDESCRIPCION.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDESCRIPCION.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDESCRIPCION.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDESCRIPCION.Location = new System.Drawing.Point(135, 221);
             this.txtDESCRIPCION.Margin = new System.Windows.Forms.Padding(4);
             this.txtDESCRIPCION.Name = "txtDESCRIPCION";
-            this.txtDESCRIPCION.Size = new System.Drawing.Size(422, 24);
+            this.txtDESCRIPCION.Size = new System.Drawing.Size(422, 27);
             this.txtDESCRIPCION.TabIndex = 13;
             this.txtDESCRIPCION.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -274,11 +273,11 @@
             // 
             this.txtMONTO.BackColor = System.Drawing.Color.LightCyan;
             this.txtMONTO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMONTO.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMONTO.Location = new System.Drawing.Point(498, 149);
             this.txtMONTO.Margin = new System.Windows.Forms.Padding(4);
             this.txtMONTO.Name = "txtMONTO";
-            this.txtMONTO.Size = new System.Drawing.Size(132, 24);
+            this.txtMONTO.Size = new System.Drawing.Size(132, 27);
             this.txtMONTO.TabIndex = 15;
             this.txtMONTO.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.txtMONTO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMONTO_KeyPress);
@@ -340,9 +339,10 @@
             // 
             // txtID_DOC
             // 
-            this.txtID_DOC.Location = new System.Drawing.Point(443, 94);
+            this.txtID_DOC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID_DOC.Location = new System.Drawing.Point(443, 100);
             this.txtID_DOC.Name = "txtID_DOC";
-            this.txtID_DOC.Size = new System.Drawing.Size(187, 33);
+            this.txtID_DOC.Size = new System.Drawing.Size(187, 29);
             this.txtID_DOC.TabIndex = 41;
             this.txtID_DOC.Visible = false;
             // 
@@ -370,10 +370,9 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.rdbTICKET);
-            this.groupBox5.Controls.Add(this.rdbPDF);
-            this.groupBox5.Location = new System.Drawing.Point(909, 212);
+            this.groupBox5.Location = new System.Drawing.Point(1013, 212);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(196, 46);
+            this.groupBox5.Size = new System.Drawing.Size(102, 60);
             this.groupBox5.TabIndex = 38;
             this.groupBox5.TabStop = false;
             // 
@@ -382,26 +381,13 @@
             this.rdbTICKET.AutoSize = true;
             this.rdbTICKET.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbTICKET.ForeColor = System.Drawing.Color.Gold;
-            this.rdbTICKET.Location = new System.Drawing.Point(92, 17);
+            this.rdbTICKET.Location = new System.Drawing.Point(4, 23);
             this.rdbTICKET.Name = "rdbTICKET";
             this.rdbTICKET.Size = new System.Drawing.Size(92, 29);
             this.rdbTICKET.TabIndex = 37;
             this.rdbTICKET.TabStop = true;
             this.rdbTICKET.Text = "TICKET";
             this.rdbTICKET.UseVisualStyleBackColor = true;
-            // 
-            // rdbPDF
-            // 
-            this.rdbPDF.AutoSize = true;
-            this.rdbPDF.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPDF.ForeColor = System.Drawing.Color.Gold;
-            this.rdbPDF.Location = new System.Drawing.Point(18, 17);
-            this.rdbPDF.Name = "rdbPDF";
-            this.rdbPDF.Size = new System.Drawing.Size(66, 29);
-            this.rdbPDF.TabIndex = 36;
-            this.rdbPDF.TabStop = true;
-            this.rdbPDF.Text = "PDF";
-            this.rdbPDF.UseVisualStyleBackColor = true;
             // 
             // btnIMPRIMIR_REPORTCAJA
             // 
@@ -483,25 +469,28 @@
             // 
             // cboTIPO_PAGO
             // 
+            this.cboTIPO_PAGO.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTIPO_PAGO.FormattingEnabled = true;
-            this.cboTIPO_PAGO.Location = new System.Drawing.Point(880, 94);
+            this.cboTIPO_PAGO.Location = new System.Drawing.Point(879, 100);
             this.cboTIPO_PAGO.Name = "cboTIPO_PAGO";
-            this.cboTIPO_PAGO.Size = new System.Drawing.Size(183, 33);
+            this.cboTIPO_PAGO.Size = new System.Drawing.Size(183, 29);
             this.cboTIPO_PAGO.TabIndex = 29;
             // 
             // txtFECHA_ANULADO
             // 
-            this.txtFECHA_ANULADO.Location = new System.Drawing.Point(880, 60);
+            this.txtFECHA_ANULADO.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFECHA_ANULADO.Location = new System.Drawing.Point(879, 63);
             this.txtFECHA_ANULADO.Name = "txtFECHA_ANULADO";
-            this.txtFECHA_ANULADO.Size = new System.Drawing.Size(225, 33);
+            this.txtFECHA_ANULADO.Size = new System.Drawing.Size(225, 29);
             this.txtFECHA_ANULADO.TabIndex = 28;
             // 
             // txtCODANULACION
             // 
             this.txtCODANULACION.BackColor = System.Drawing.Color.Gold;
-            this.txtCODANULACION.Location = new System.Drawing.Point(880, 21);
+            this.txtCODANULACION.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCODANULACION.Location = new System.Drawing.Point(879, 24);
             this.txtCODANULACION.Name = "txtCODANULACION";
-            this.txtCODANULACION.Size = new System.Drawing.Size(225, 33);
+            this.txtCODANULACION.Size = new System.Drawing.Size(225, 29);
             this.txtCODANULACION.TabIndex = 27;
             this.txtCODANULACION.UseSystemPasswordChar = true;
             // 
@@ -563,10 +552,11 @@
             // 
             this.cboTIPO_MOV.BackColor = System.Drawing.Color.LightCyan;
             this.cboTIPO_MOV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTIPO_MOV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTIPO_MOV.FormattingEnabled = true;
-            this.cboTIPO_MOV.Location = new System.Drawing.Point(174, 92);
+            this.cboTIPO_MOV.Location = new System.Drawing.Point(172, 100);
             this.cboTIPO_MOV.Name = "cboTIPO_MOV";
-            this.cboTIPO_MOV.Size = new System.Drawing.Size(252, 33);
+            this.cboTIPO_MOV.Size = new System.Drawing.Size(252, 29);
             this.cboTIPO_MOV.TabIndex = 16;
             this.cboTIPO_MOV.SelectedIndexChanged += new System.EventHandler(this.cboTIPO_MOV_SelectedIndexChanged);
             // 
@@ -652,19 +642,19 @@
             this.dgvMOV_CAJAKARDEX.AllowUserToDeleteRows = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeColumns = false;
             this.dgvMOV_CAJAKARDEX.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            this.dgvMOV_CAJAKARDEX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMOV_CAJAKARDEX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvMOV_CAJAKARDEX.BackgroundColor = System.Drawing.Color.DarkCyan;
             this.dgvMOV_CAJAKARDEX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMOV_CAJAKARDEX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMOV_CAJAKARDEX.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMOV_CAJAKARDEX.GridColor = System.Drawing.Color.DarkOrange;
@@ -672,18 +662,18 @@
             this.dgvMOV_CAJAKARDEX.MultiSelect = false;
             this.dgvMOV_CAJAKARDEX.Name = "dgvMOV_CAJAKARDEX";
             this.dgvMOV_CAJAKARDEX.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMOV_CAJAKARDEX.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMOV_CAJAKARDEX.RowHeadersVisible = false;
             this.dgvMOV_CAJAKARDEX.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMOV_CAJAKARDEX.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMOV_CAJAKARDEX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMOV_CAJAKARDEX.Size = new System.Drawing.Size(1311, 294);
             this.dgvMOV_CAJAKARDEX.TabIndex = 19;
@@ -743,9 +733,9 @@
             this.btnBUSCAR.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBUSCAR.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSCAR.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnBUSCAR.Location = new System.Drawing.Point(599, 41);
+            this.btnBUSCAR.Location = new System.Drawing.Point(598, 37);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(152, 39);
+            this.btnBUSCAR.Size = new System.Drawing.Size(152, 49);
             this.btnBUSCAR.TabIndex = 17;
             this.btnBUSCAR.Text = "BUSCAR";
             this.btnBUSCAR.UseVisualStyleBackColor = false;
@@ -782,7 +772,7 @@
             this.cboTIPO_BUSQUEDA.BackColor = System.Drawing.Color.LightCyan;
             this.cboTIPO_BUSQUEDA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTIPO_BUSQUEDA.FormattingEnabled = true;
-            this.cboTIPO_BUSQUEDA.Location = new System.Drawing.Point(16, 48);
+            this.cboTIPO_BUSQUEDA.Location = new System.Drawing.Point(16, 50);
             this.cboTIPO_BUSQUEDA.Name = "cboTIPO_BUSQUEDA";
             this.cboTIPO_BUSQUEDA.Size = new System.Drawing.Size(200, 26);
             this.cboTIPO_BUSQUEDA.TabIndex = 16;
@@ -792,11 +782,11 @@
             // 
             this.txtDATA_BUSQUEDA.BackColor = System.Drawing.Color.LightCyan;
             this.txtDATA_BUSQUEDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDATA_BUSQUEDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDATA_BUSQUEDA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDATA_BUSQUEDA.Location = new System.Drawing.Point(233, 50);
             this.txtDATA_BUSQUEDA.Margin = new System.Windows.Forms.Padding(4);
             this.txtDATA_BUSQUEDA.Name = "txtDATA_BUSQUEDA";
-            this.txtDATA_BUSQUEDA.Size = new System.Drawing.Size(345, 24);
+            this.txtDATA_BUSQUEDA.Size = new System.Drawing.Size(345, 27);
             this.txtDATA_BUSQUEDA.TabIndex = 9;
             // 
             // label23
@@ -831,22 +821,22 @@
             // 
             this.txtTOTALCAJA.BackColor = System.Drawing.Color.LightCyan;
             this.txtTOTALCAJA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTOTALCAJA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTOTALCAJA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTOTALCAJA.Location = new System.Drawing.Point(1126, 34);
             this.txtTOTALCAJA.Margin = new System.Windows.Forms.Padding(4);
             this.txtTOTALCAJA.Name = "txtTOTALCAJA";
-            this.txtTOTALCAJA.Size = new System.Drawing.Size(169, 24);
+            this.txtTOTALCAJA.Size = new System.Drawing.Size(169, 27);
             this.txtTOTALCAJA.TabIndex = 39;
             // 
             // txtTOTALSOLES
             // 
             this.txtTOTALSOLES.BackColor = System.Drawing.Color.LightCyan;
             this.txtTOTALSOLES.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTOTALSOLES.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTOTALSOLES.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTOTALSOLES.Location = new System.Drawing.Point(290, 34);
             this.txtTOTALSOLES.Margin = new System.Windows.Forms.Padding(4);
             this.txtTOTALSOLES.Name = "txtTOTALSOLES";
-            this.txtTOTALSOLES.Size = new System.Drawing.Size(164, 24);
+            this.txtTOTALSOLES.Size = new System.Drawing.Size(164, 27);
             this.txtTOTALSOLES.TabIndex = 22;
             // 
             // label15
@@ -877,11 +867,11 @@
             // 
             this.txtTOTALDOLARES.BackColor = System.Drawing.Color.LightCyan;
             this.txtTOTALDOLARES.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTOTALDOLARES.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTOTALDOLARES.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTOTALDOLARES.Location = new System.Drawing.Point(698, 34);
             this.txtTOTALDOLARES.Margin = new System.Windows.Forms.Padding(4);
             this.txtTOTALDOLARES.Name = "txtTOTALDOLARES";
-            this.txtTOTALDOLARES.Size = new System.Drawing.Size(173, 24);
+            this.txtTOTALDOLARES.Size = new System.Drawing.Size(173, 27);
             this.txtTOTALDOLARES.TabIndex = 14;
             // 
             // label26
@@ -912,7 +902,7 @@
             this.panel2.Controls.Add(this.label14);
             this.panel2.Location = new System.Drawing.Point(-2, 866);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1468, 46);
+            this.panel2.Size = new System.Drawing.Size(1378, 46);
             this.panel2.TabIndex = 19;
             // 
             // lblFecha
@@ -920,7 +910,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(1339, 10);
+            this.lblFecha.Location = new System.Drawing.Point(1259, 10);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(73, 20);
             this.lblFecha.TabIndex = 7;
@@ -931,7 +921,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(1289, 10);
+            this.label22.Location = new System.Drawing.Point(1199, 10);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(54, 20);
             this.label22.TabIndex = 6;
@@ -942,7 +932,7 @@
             this.lblSede.AutoSize = true;
             this.lblSede.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.White;
-            this.lblSede.Location = new System.Drawing.Point(892, 10);
+            this.lblSede.Location = new System.Drawing.Point(834, 10);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(73, 20);
             this.lblSede.TabIndex = 5;
@@ -953,7 +943,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(849, 10);
+            this.label20.Location = new System.Drawing.Point(791, 10);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 20);
             this.label20.TabIndex = 4;
@@ -1072,7 +1062,6 @@
         public System.Windows.Forms.ComboBox cboTIPO_MOV;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rdbTICKET;
-        private System.Windows.Forms.RadioButton rdbPDF;
         private System.Windows.Forms.Button btnIMPRIMIR_REPORTCAJA;
         private System.Windows.Forms.Button btnIMPRIMIR;
         private System.Windows.Forms.Button btnCANCELAR;
